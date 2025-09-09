@@ -32,7 +32,7 @@ var areaData = [
     point: {
       x: 370,
       y: 300,
-      width: 320,
+      width: 160,
       height: 256
     },
     offset: {
@@ -80,8 +80,8 @@ var areaData = [
     point: {
       x: 1010,
       y: 300,
-      width: 320,
-      height: 256
+      width: 160,
+      height: 255
     },
     offset: {
       x: null,
@@ -488,7 +488,7 @@ var areaData = [
     point: {
       x: 1330,
       y: 812,
-      width: 320,
+      width: 640,
       height: 256
     },
     offset: {
@@ -536,7 +536,7 @@ var areaData = [
     point: {
       x: 1970,
       y: 812,
-      width: 640,
+      width: 639,
       height: 256
     },
     offset: {
@@ -777,7 +777,7 @@ var areaData = [
       x: 370,
       y: 1324,
       width: 320,
-      height: 256
+      height: 512
     },
     offset: {
       x: null,
@@ -944,7 +944,7 @@ var areaData = [
     point: {
       x: 50,
       y: 1580,
-      width: 320,
+      width: 322,
       height: 256
     },
     offset: {
@@ -1136,7 +1136,7 @@ var areaData = [
     point: {
       x: 50,
       y: 1836,
-      width: 320,
+      width: 640,
       height: 256
     },
     offset: {
@@ -1449,8 +1449,8 @@ var areaData = [
     point: {
       x: 2290,
       y: 2092,
-      width: 320,
-      height: 256
+      width: 318,
+      height: 254
     },
     offset: {
       x: null,
@@ -1497,8 +1497,8 @@ var areaData = [
     point: {
       x: 1191,
       y: 50,
-      width: 351,
-      height: 222
+      width: 342,
+      height: 216
     },
     offset: {
       x: null,
@@ -1522,7 +1522,7 @@ var areaData = [
       x: 1270,
       y: 2768,
       width: 160,
-      height: 144
+      height: 432
     },
     offset: {
       x: null,
@@ -1545,8 +1545,8 @@ var areaData = [
     point: {
       x: 1270,
       y: 2448,
-      width: 161,
-      height: 146
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1642,7 +1642,7 @@ var areaData = [
       x: 650,
       y: 2448,
       width: 160,
-      height: 144
+      height: 128
     },
     offset: {
       x: null,
@@ -1738,7 +1738,7 @@ var areaData = [
       x: 1685,
       y: 2448,
       width: 160,
-      height: 144
+      height: 128
     },
     offset: {
       x: null,
@@ -1834,7 +1834,7 @@ var areaData = [
       x: 2448,
       y: 2448,
       width: 160,
-      height: 144
+      height: 128
     },
     offset: {
       x: null,
@@ -1882,7 +1882,7 @@ var areaData = [
       x: 1591,
       y: 50,
       width: 160,
-      height: 145
+      height: 144
     },
     offset: {
       x: null,

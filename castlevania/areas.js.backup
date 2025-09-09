@@ -1,15 +1,13 @@
-var areaData = [
+var areas = [
   {
     order: 1,
-    title: "Turtle Rock",
+    title: "1-1",
     ident: "1-1",
-    artistId: "WILP",
+    artistId: "ARVY",
     animation: false,
     point: {
-      x: 50,
-      y: 300,
-      width: 320,
-      height: 256
+      x: 32,
+      y: 1712
     },
     offset: {
       x: null,
@@ -18,22 +16,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "dungeon",
-    zoom: 3,
+    type: "terrace",
+    zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 2,
-    title: "Tal Tal Mountain Range",
+    title: "1-2",
     ident: "1-2",
-    artistId: "FOOF",
+    artistId: "JUAN",
     animation: false,
     point: {
-      x: 370,
-      y: 300,
-      width: 320,
-      height: 256
+      x: 416,
+      y: 1712
     },
     offset: {
       x: null,
@@ -42,22 +38,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "mountain",
-    zoom: 3,
+    type: "terrace",
+    zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 3,
-    title: "Tal Tal Mountain Range 2",
+    title: "1-3",
     ident: "1-3",
-    artistId: "JUAN",
-    animation: false,
+    artistId: "STEF",
+    animation: true,
     point: {
-      x: 530,
-      y: 300,
-      width: 480,
-      height: 256
+      x: 800,
+      y: 1712
     },
     offset: {
       x: null,
@@ -66,22 +60,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "mountain",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 4,
-    title: "Mt. Tamaranch",
+    title: "1-4",
     ident: "1-4",
-    artistId: "WUKO",
+    artistId: "SCOO",
     animation: false,
     point: {
-      x: 1010,
-      y: 300,
-      width: 320,
-      height: 256
+      x: 1200,
+      y: 1712
     },
     offset: {
       x: null,
@@ -90,22 +82,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "dungeon",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 5,
-    title: "Tal Tal Mountain Range 3",
+    title: "1-5",
     ident: "1-5",
-    artistId: "BRAN",
+    artistId: "ARKF",
     animation: false,
     point: {
-      x: 1170,
-      y: 300,
-      width: 480,
-      height: 256
+      x: 1584,
+      y: 1712
     },
     offset: {
       x: null,
@@ -114,22 +104,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "mountain",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 6,
-    title: "Tal Tal Mountain Range 5",
-    ident: "1-7",
-    artistId: "DART",
+    title: "1-6",
+    ident: "1-6",
+    artistId: "ARKF",
     animation: false,
     point: {
-      x: 1650,
-      y: 300,
-      width: 320,
-      height: 256
+      x: 1968,
+      y: 1712
     },
     offset: {
       x: null,
@@ -138,22 +126,64 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "mountain",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 7,
+    title: "1-7A",
+    ident: "1-7A",
+    artistId: "CLAR",
+    animation: false,
+    point: {
+      x: 2336,
+      y: 1712
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 8,
+    title: "1-7B",
+    ident: "1-7B",
+    artistId: "CROW",
+    animation: false,
+    point: {
+      x: 2336,
+      y: 1904
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 9,
-    title: "Tal Tal Mountain Range 6",
+    title: "1-8",
     ident: "1-8",
-    artistId: "BLIN_2",
+    artistId: "HAYW",
     animation: false,
     point: {
-      x: 1970,
-      y: 300,
-      width: 320,
-      height: 256
+      x: 2848,
+      y: 1712
     },
     offset: {
       x: null,
@@ -162,22 +192,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "mountain",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 10,
-    title: "Eagle\u2019s Tower",
+    title: "1-9",
     ident: "1-9",
-    artistId: "DONF",
+    artistId: "GHOU",
     animation: false,
     point: {
-      x: 2290,
-      y: 300,
-      width: 320,
-      height: 256
+      x: 3360,
+      y: 1712
     },
     offset: {
       x: null,
@@ -186,22 +214,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "dungeon",
+    type: "boss",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 11,
-    title: "Mr. Write",
+    title: "2-1",
     ident: "2-1",
-    artistId: "DONP",
+    artistId: "ARKF",
     animation: false,
     point: {
-      x: 50,
-      y: 556,
-      width: 320,
-      height: 256
+      x: 3616,
+      y: 1648
     },
     offset: {
       x: null,
@@ -210,22 +236,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "terrace",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 12,
-    title: "Goponga Swamp",
+    title: "2-2",
     ident: "2-2",
-    artistId: "PIKE",
+    artistId: "BLIN_2",
     animation: false,
     point: {
-      x: 370,
-      y: 556,
-      width: 320,
-      height: 256
+      x: 3360,
+      y: 1456
     },
     offset: {
       x: null,
@@ -234,22 +258,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "terrace",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 13,
-    title: "Battle Grotto",
+    title: "2-3",
     ident: "2-3",
-    artistId: "LYZE",
+    artistId: "PIXE_2",
     animation: false,
     point: {
-      x: 690,
-      y: 556,
-      width: 320,
-      height: 256
+      x: 2976,
+      y: 1456
     },
     offset: {
       x: null,
@@ -258,22 +280,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "dungeon",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 14,
-    title: `Camera Shop (Dampé\u2019s Shack)`,
+    title: "2-4",
     ident: "2-4",
-    artistId: "MARI",
+    artistId: "DIOS",
     animation: false,
     point: {
-      x: 1010,
-      y: 556,
-      width: 320,
-      height: 256
+      x: 2592,
+      y: 1456
     },
     offset: {
       x: null,
@@ -289,15 +309,13 @@ var areaData = [
   },
   {
     order: 15,
-    title: "Tal Tal Heights",
-    ident: "2-5",
-    artistId: "ENRI",
+    title: "2-5 & 2-6",
+    ident: "2-5_2-6",
+    artistId: "MOBY",
     animation: false,
     point: {
-      x: 1330,
-      y: 556,
-      width: 320,
-      height: 256
+      x: 2592,
+      y: 1264
     },
     offset: {
       x: null,
@@ -306,46 +324,108 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "terrace",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 15,
-    title: "Angler\u2019s Tunnel",
-    ident: "2-6",
-    artistId: "RATA",
-    animation: false,
-    point: {
-      x: 1650,
-      y: 556,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "dungeon",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 16,
-    title: "Tal Tal Heights 2",
+    title: "2-7",
     ident: "2-7",
-    artistId: "SMOK",
+    artistId: "COEL",
     animation: false,
     point: {
-      x: 1970,
-      y: 556,
-      width: 320,
-      height: 256
+      x: 2208,
+      y: 1264
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 17,
+    title: "2-8",
+    ident: "2-8",
+    artistId: "MARC",
+    animation: false,
+    point: {
+      x: 1824,
+      y: 1264
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 18,
+    title: "2-9",
+    ident: "2-9",
+    artistId: "DONP",
+    animation: false,
+    point: {
+      x: 2080,
+      y: 1072
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 19,
+    title: "2-10",
+    ident: "2-10",
+    artistId: "DONP",
+    animation: false,
+    point: {
+      x: 1824,
+      y: 1072
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 20,
+    title: "3-1",
+    ident: "3-1",
+    artistId: "RYAN",
+    animation: false,
+    point: {
+      x: 1440,
+      y: 1056
     },
     offset: {
       x: null,
@@ -360,64 +440,14 @@ var areaData = [
     post_url: ""
   },
   {
-    order: 17,
-    title: "Rapid Ride Shop",
-    ident: "2-8",
-    artistId: "DART",
-    animation: false,
-    point: {
-      x: 2290,
-      y: 556,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "town",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 20,
-    title: "Mysterious Forest",
-    ident: "3-1",
-    artistId: "M3CH",
-    animation: false,
-    point: {
-      x: 50,
-      y: 812,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "forest",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
     order: 21,
-    title: "Fairy Fountain",
+    title: "3-2",
     ident: "3-2",
-    artistId: "LYZE",
+    artistId: "KHYL",
     animation: false,
     point: {
-      x: 370,
-      y: 812,
-      width: 320,
-      height: 256
+      x: 1056,
+      y: 1056
     },
     offset: {
       x: null,
@@ -426,22 +456,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "forest",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 22,
-    title: "Crazy Tracy\u2019s Health Spa",
+    title: "3-3",
     ident: "3-3",
-    artistId: "DAIZ",
-    animation: false,
+    artistId: "TONI",
+    animation: true,
     point: {
-      x: 690,
-      y: 812,
-      width: 320,
-      height: 256
+      x: 1056,
+      y: 864
     },
     offset: {
       x: null,
@@ -450,22 +478,218 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "town",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 23,
-    title: "Tabahl Wasteland",
+    title: "3-4",
     ident: "3-4",
-    artistId: "POTA",
+    artistId: "NEKO",
     animation: false,
     point: {
-      x: 1010,
-      y: 812,
-      width: 320,
-      height: 256
+      x: 1440,
+      y: 864
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 24,
+    title: "3-5",
+    ident: "3-5",
+    artistId: "RUNT",
+    animation: false,
+    point: {
+      x: 1824,
+      y: 864
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 25,
+    title: "3-6",
+    ident: "3-6",
+    artistId: "MARC",
+    animation: false,
+    point: {
+      x: 2208,
+      y: 864
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 26,
+    title: "3-7",
+    ident: "3-7",
+    artistId: "JUAN",
+    animation: true,
+    point: {
+      x: 2080,
+      y: 672
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 27,
+    title: "3-8",
+    ident: "3-8",
+    artistId: "VIER",
+    animation: false,
+    point: {
+      x: 2592,
+      y: 672
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 28,
+    title: "3-9",
+    ident: "3-9",
+    artistId: "ASHT",
+    animation: false,
+    point: {
+      x: 3104,
+      y: 672
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 29,
+    title: "3-10",
+    ident: "3-10",
+    artistId: "FOOF",
+    animation: false,
+    point: {
+      x: 3488,
+      y: 672
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 30,
+    title: "3-11",
+    ident: "3-11",
+    artistId: "RATA",
+    animation: true,
+    point: {
+      x: 3872,
+      y: 672
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 31,
+    title: "3-12",
+    ident: "3-12",
+    artistId: "RUDY",
+    animation: false,
+    point: {
+      x: 4384,
+      y: 672
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 32,
+    title: "P-1",
+    ident: "P-1",
+    artistId: "LOMB",
+    animation: false,
+    point: {
+      x: 4384,
+      y: 864
     },
     offset: {
       x: null,
@@ -480,16 +704,14 @@ var areaData = [
     post_url: ""
   },
   {
-    order: 24,
-    title: "Kanalet Castle",
-    ident: "3-5",
-    artistId: "UNSI",
+    order: 33,
+    title: "P-2",
+    ident: "P-2",
+    artistId: "RATA",
     animation: false,
     point: {
-      x: 1330,
-      y: 812,
-      width: 320,
-      height: 256
+      x: 4384,
+      y: 1040
     },
     offset: {
       x: null,
@@ -498,22 +720,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "castle",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
-    order: 25,
-    title: "Kanalet Castle 2",
-    ident: "3-6",
-    artistId: "UNSI",
+    order: 34,
+    title: "P-3",
+    ident: "P-3",
+    artistId: "JAQU",
     animation: false,
     point: {
-      x: 1650,
-      y: 812,
-      width: 320,
-      height: 256
+      x: 4384,
+      y: 1216
     },
     offset: {
       x: null,
@@ -522,22 +742,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "castle",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
-    order: 26,
-    title: "Rapid Ride",
-    ident: "3-7",
-    artistId: "KENC",
+    order: 35,
+    title: "P-4",
+    ident: "P-4",
+    artistId: "NORM",
     animation: false,
     point: {
-      x: 1970,
-      y: 812,
-      width: 640,
-      height: 256
+      x: 4384,
+      y: 1392
     },
     offset: {
       x: null,
@@ -546,22 +764,42 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "surfing",
+    type: "underground",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 36,
+    title: "P-5",
+    ident: "P-5",
+    artistId: "CHUB",
+    animation: false,
+    point: {
+      x: 4384,
+      y: 1568
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 37,
-    title: "Mysterious Forest 2",
+    title: "4-1",
     ident: "4-1",
-    artistId: "NEKO",
+    artistId: "KOSE",
     animation: false,
     point: {
-      x: 50,
-      y: 1068,
-      width: 320,
-      height: 256
+      x: 4384,
+      y: 1872
     },
     offset: {
       x: null,
@@ -570,22 +808,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "forest",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 38,
-    title: "Mysterious Forest 3",
+    title: "4-2",
     ident: "4-2",
-    artistId: "NOP0",
-    animation: false,
+    artistId: "NORM",
+    animation: true,
     point: {
-      x: 370,
-      y: 1068,
-      width: 320,
-      height: 256
+      x: 4768,
+      y: 1872
     },
     offset: {
       x: null,
@@ -594,22 +830,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "forest",
+    type: "underground",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 39,
-    title: "Witch\u2019s Hut",
+    title: "4-3",
     ident: "4-3",
-    artistId: "MIKE",
+    artistId: "AC2D",
     animation: false,
     point: {
-      x: 690,
-      y: 1068,
-      width: 320,
-      height: 256
+      x: 5152,
+      y: 1872
     },
     offset: {
       x: null,
@@ -625,15 +859,13 @@ var areaData = [
   },
   {
     order: 40,
-    title: "Color Dungeon",
+    title: "4-4",
     ident: "4-4",
-    artistId: "ANIM",
+    artistId: "PINS",
     animation: false,
     point: {
-      x: 1010,
-      y: 1068,
-      width: 320,
-      height: 256
+      x: 5536,
+      y: 1872
     },
     offset: {
       x: null,
@@ -648,16 +880,36 @@ var areaData = [
     post_url: ""
   },
   {
-    order: 42,
-    title: "Kanalet Castle 3",
-    ident: "4-5",
-    artistId: "OTA0",
+    order: 41,
+    title: "4-X",
+    ident: "4-X",
+    artistId: "ANIM",
     animation: false,
     point: {
-      x: 1330,
-      y: 1068,
-      width: 320,
-      height: 256
+      x: 5856,
+      y: 1184
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "vertical",
+    type: "other",
+    zoom: 1,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 42,
+    title: "4-5",
+    ident: "4-5",
+    artistId: "DIOS",
+    animation: false,
+    point: {
+      x: 5856,
+      y: 1008
     },
     offset: {
       x: null,
@@ -666,22 +918,86 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "castle",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 43,
-    title: "Kanalet Castle 4",
+    title: "4-6",
     ident: "4-6",
-    artistId: "DEVI",
+    artistId: "LYZE",
     animation: false,
     point: {
-      x: 1650,
-      y: 1068,
-      width: 320,
-      height: 256
+      x: 6240,
+      y: 1008
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 44,
+    title: "4-7",
+    ident: "4-7",
+    artistId: "CURE",
+    animation: false,
+    point: {
+      x: 6624,
+      y: 1008
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 45,
+    title: "4-8",
+    ident: "4-8",
+    artistId: "HAYW",
+    animation: false,
+    point: {
+      x: 7008,
+      y: 1008
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "terrace",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 46,
+    title: "4-9",
+    ident: "4-9",
+    artistId: "XAND",
+    animation: false,
+    point: {
+      x: 7392,
+      y: 1008
     },
     offset: {
       x: null,
@@ -696,16 +1012,14 @@ var areaData = [
     post_url: ""
   },
   {
-    order: 44,
-    title: "Rapid Ride 2",
-    ident: "4-7",
-    artistId: "MARI",
+    order: 47,
+    title: "4-10",
+    ident: "4-10",
+    artistId: "BATF",
     animation: false,
     point: {
-      x: 1970,
-      y: 1068,
-      width: 320,
-      height: 256
+      x: 8160,
+      y: 1008
     },
     offset: {
       x: null,
@@ -714,46 +1028,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "surfing",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 45,
-    title: "Rapid Ride 3",
-    ident: "4-8",
-    artistId: "JENN",
-    animation: false,
-    point: {
-      x: 2290,
-      y: 1068,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "surfing",
+    type: "boss",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 48,
-    title: "Mabe Village 1",
+    title: "5-1",
     ident: "5-1",
-    artistId: "DUST",
+    artistId: "CLAR",
     animation: false,
     point: {
-      x: 50,
-      y: 1324,
-      width: 320,
-      height: 256
+      x: 8416,
+      y: 1008
     },
     offset: {
       x: null,
@@ -762,22 +1050,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "town",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 49,
-    title: "Mabe Village 2",
+    title: "5-2",
     ident: "5-2",
-    artistId: "BLIN",
+    artistId: "JAQU",
     animation: false,
     point: {
-      x: 370,
-      y: 1324,
-      width: 320,
-      height: 256
+      x: 8416,
+      y: 816
     },
     offset: {
       x: null,
@@ -786,22 +1072,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "town",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 50,
-    title: "Ukuku Prairie Warp",
+    title: "5-3",
     ident: "5-3",
-    artistId: "WOOD",
+    artistId: "JAQU",
     animation: false,
     point: {
-      x: 690,
-      y: 1324,
-      width: 320,
-      height: 256
+      x: 8928,
+      y: 816
     },
     offset: {
       x: null,
@@ -810,22 +1094,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "terrace",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 51,
-    title: "Pothole Field",
+    title: "5-4",
     ident: "5-4",
-    artistId: "TANU",
+    artistId: "SETH",
     animation: false,
     point: {
-      x: 1010,
-      y: 1324,
-      width: 320,
-      height: 256
+      x: 9440,
+      y: 816
     },
     offset: {
       x: null,
@@ -834,22 +1116,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "terrace",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 52,
-    title: "Telephone Booth",
+    title: "5-5",
     ident: "5-5",
-    artistId: "BG00",
-    animation: false,
+    artistId: "STEF",
+    animation: true,
     point: {
-      x: 1330,
-      y: 1324,
-      width: 320,
-      height: 256
+      x: 9696,
+      y: 816
     },
     offset: {
       x: null,
@@ -858,22 +1138,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "terrace",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 53,
-    title: "Seashell Mansion ",
+    title: "5-6",
     ident: "5-6",
-    artistId: "BLEU",
+    artistId: "JUAN",
     animation: false,
     point: {
-      x: 1650,
-      y: 1324,
-      width: 320,
-      height: 256
+      x: 9440,
+      y: 624
     },
     offset: {
       x: null,
@@ -882,22 +1160,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "town",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 54,
-    title: "Northern Face Shrine",
+    title: "5-7",
     ident: "5-7",
-    artistId: "ATTI",
+    artistId: "MARI",
     animation: false,
     point: {
-      x: 1970,
-      y: 1324,
-      width: 320,
-      height: 256
+      x: 9184,
+      y: 624
     },
     offset: {
       x: null,
@@ -906,22 +1182,130 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "dungeon",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 55,
-    title: "Shrine Waterfall",
+    title: "5-8",
     ident: "5-8",
-    artistId: "GHOU",
+    artistId: "ROBI",
     animation: false,
     point: {
-      x: 2290,
-      y: 1324,
-      width: 320,
-      height: 256
+      x: 8672,
+      y: 624
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 56,
+    title: "5-9",
+    ident: "5-9",
+    artistId: "LOOL",
+    animation: false,
+    point: {
+      x: 8160,
+      y: 624
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 57,
+    title: "5-10",
+    ident: "5-10",
+    artistId: "DANI_2",
+    animation: true,
+    point: {
+      x: 8288,
+      y: 432
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 58,
+    title: "5-11",
+    ident: "5-11",
+    artistId: "STEV",
+    animation: false,
+    point: {
+      x: 7904,
+      y: 432
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 59,
+    title: "5-12",
+    ident: "5-12",
+    artistId: "STRA",
+    animation: true,
+    point: {
+      x: 7648,
+      y: 432
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "boss",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 60,
+    title: "6-1",
+    ident: "6-1",
+    artistId: "HAYW",
+    animation: false,
+    point: {
+      x: 7264,
+      y: 432
     },
     offset: {
       x: null,
@@ -936,40 +1320,14 @@ var areaData = [
     post_url: ""
   },
   {
-    order: 60,
-    title: "Mabe Village 3",
-    ident: "6-1",
-    artistId: "LAMI",
-    animation: false,
-    point: {
-      x: 50,
-      y: 1580,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "town",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
     order: 61,
-    title: "Mabe Village 4",
+    title: "6-2",
     ident: "6-2",
-    artistId: "BLIN",
+    artistId: "KOHE",
     animation: false,
     point: {
-      x: 370,
-      y: 1580,
-      width: 320,
-      height: 256
+      x: 6880,
+      y: 432
     },
     offset: {
       x: null,
@@ -978,22 +1336,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "town",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 62,
-    title: "Key Cavern",
+    title: "6-3",
     ident: "6-3",
-    artistId: "PKDO",
+    artistId: "RAKU",
     animation: false,
     point: {
-      x: 690,
-      y: 1580,
-      width: 320,
-      height: 256
+      x: 6496,
+      y: 432
     },
     offset: {
       x: null,
@@ -1002,22 +1358,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "dungeon",
+    type: "terrace",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 63,
-    title: "Ukuku Prairie Lake",
+    title: "6-4",
     ident: "6-4",
-    artistId: "NORM",
+    artistId: "DONF",
     animation: false,
     point: {
-      x: 1010,
-      y: 1580,
-      width: 320,
-      height: 256
+      x: 6112,
+      y: 432
     },
     offset: {
       x: null,
@@ -1033,15 +1387,13 @@ var areaData = [
   },
   {
     order: 64,
-    title: "Ukuku Prairie",
+    title: "6-5",
     ident: "6-5",
-    artistId: "KLAR",
+    artistId: "MATT",
     animation: false,
     point: {
-      x: 1330,
-      y: 1580,
-      width: 320,
-      height: 256
+      x: 5856,
+      y: 432
     },
     offset: {
       x: null,
@@ -1050,22 +1402,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "terrace",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 65,
-    title: "Ukuku Prairie 2",
+    title: "6-6",
     ident: "6-6",
-    artistId: "GLIT",
+    artistId: "BARO",
     animation: false,
     point: {
-      x: 1650,
-      y: 1580,
-      width: 320,
-      height: 256
+      x: 5856,
+      y: 240
     },
     offset: {
       x: null,
@@ -1074,22 +1424,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "terrace",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 66,
-    title: "Southern Face Shrine",
+    title: "6-7",
     ident: "6-7",
-    artistId: "AINA",
-    animation: false,
+    artistId: "TANU_2",
+    animation: true,
     point: {
-      x: 1970,
-      y: 1580,
-      width: 320,
-      height: 256
+      x: 5520,
+      y: 240
     },
     offset: {
       x: null,
@@ -1098,22 +1446,42 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "dungeon",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 67,
-    title: "Ruins",
-    ident: "6-8",
-    artistId: "RUNT",
+    title: "6-8 & 6-9",
+    ident: "6-8_6-9",
+    artistId: "META",
+    animation: true,
+    point: {
+      x: 5344,
+      y: 432
+    },
+    offset: {
+      x: null,
+      y: null,
+      width: null,
+      height: null
+    },
+    pan: "horizontal",
+    type: "castle",
+    zoom: 2,
+    teleporters: [],
+    post_url: ""
+  },
+  {
+    order: 68,
+    title: "6-10",
+    ident: "6-10",
+    artistId: "STEV",
     animation: false,
     point: {
-      x: 2290,
-      y: 1580,
-      width: 320,
-      height: 256
+      x: 5344,
+      y: 240
     },
     offset: {
       x: null,
@@ -1129,15 +1497,13 @@ var areaData = [
   },
   {
     order: 69,
-    title: "Beach trail",
+    title: "7-1",
     ident: "7-1",
-    artistId: "SAMT",
+    artistId: "TONY",
     animation: false,
     point: {
-      x: 50,
-      y: 1836,
-      width: 320,
-      height: 256
+      x: 4832,
+      y: 240
     },
     offset: {
       x: null,
@@ -1153,15 +1519,13 @@ var areaData = [
   },
   {
     order: 70,
-    title: "Tail Cave",
+    title: "7-2",
     ident: "7-2",
-    artistId: "SAMT",
+    artistId: "RATA",
     animation: false,
     point: {
-      x: 370,
-      y: 1836,
-      width: 320,
-      height: 256
+      x: 5088,
+      y: 48
     },
     offset: {
       x: null,
@@ -1177,15 +1541,13 @@ var areaData = [
   },
   {
     order: 71,
-    title: "Signpost Maze",
+    title: "7-3",
     ident: "7-3",
-    artistId: "ALWO",
-    animation: false,
+    artistId: "RATA",
+    animation: true,
     point: {
-      x: 690,
-      y: 1836,
-      width: 320,
-      height: 256
+      x: 4832,
+      y: 48
     },
     offset: {
       x: null,
@@ -1194,22 +1556,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "terrace",
+    type: "castle",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 72,
-    title: "Richard\u2019s Villa",
+    title: "7-4",
     ident: "7-4",
-    artistId: "ATCE",
+    artistId: "ZERN",
     animation: false,
     point: {
-      x: 1010,
-      y: 1836,
-      width: 320,
-      height: 256
+      x: 4576,
+      y: 48
     },
     offset: {
       x: null,
@@ -1218,671 +1578,20 @@ var areaData = [
       height: null
     },
     pan: "horizontal",
-    type: "town",
+    type: "boss",
     zoom: 2,
     teleporters: [],
     post_url: ""
   },
   {
     order: 73,
-    title: "Catfish\u2019s Maw",
-    ident: "7-5",
-    artistId: "ZUSH",
-    animation: false,
-    point: {
-      x: 1330,
-      y: 1836,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "dungeon",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 74,
-    title: "Martha\u2019s Bay",
-    ident: "7-6",
-    artistId: "EMMA",
-    animation: false,
-    point: {
-      x: 1650,
-      y: 1836,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "terrace",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 75,
-    title: "Animal Village",
-    ident: "7-7",
-    artistId: "ZAEB",
-    animation: false,
-    point: {
-      x: 1970,
-      y: 1836,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "town",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 76,
-    title: "Yarna Desert",
-    ident: "7-8",
-    artistId: "CROW",
-    animation: false,
-    point: {
-      x: 2290,
-      y: 1836,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "desert",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 77,
-    title: "Toronbo Shores & Sales\u2019 House o\u2019 Bananas",
-    ident: "8-1_8-2",
-    artistId: "DEWN",
-    animation: false,
-    point: {
-      x: 50,
-      y: 2092,
-      width: 640,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "beach",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 79,
-    title: "Toronbo Shores 2",
-    ident: "8-3",
-    artistId: "YOKA",
-    animation: false,
-    point: {
-      x: 690,
-      y: 2092,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "beach",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 80,
-    title: "Ghost\u2019s House",
-    ident: "8-4",
-    artistId: "BRAN",
-    animation: false,
-    point: {
-      x: 1010,
-      y: 2092,
-      width: 480,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "terrace",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-
-  {
-    order: 82,
-    title: "Martha\u2019s Bay 2",
-    ident: "8-6",
-    artistId: "BTDA",
-    animation: false,
-    point: {
-      x: 1490,
-      y: 2092,
-      width: 480,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "terrace",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 83,
-    title: "Animal Village Warp",
-    ident: "8-7",
-    artistId: "AGUA",
-    animation: false,
-    point: {
-      x: 1970,
-      y: 2092,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "terrace",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 84,
-    title: "Yarna Desert 2",
-    ident: "8-8",
-    artistId: "HADI",
-    animation: false,
-    point: {
-      x: 2290,
-      y: 2092,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "desert",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 85,
-    title: "Ending",
+    title: "END",
     ident: "END",
-    artistId: "NEKO",
+    artistId: "META",
     animation: false,
     point: {
-      x: 1270,
-      y: 2608,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "other",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 86,
-    title: "Koholint Redrawn",
-    ident: "0-1",
-    artistId: "BLIN_2",
-    animation: false,
-    point: {
-      x: 1191,
-      y: 50,
-      width: 351,
-      height: 222
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "other",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 87,
-    title: "Windfish",
-    ident: "windfish",
-    artistId: "UNSI",
-    animation: false,
-    point: {
-      x: 1270,
-      y: 2768,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "other",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 88,
-    title: "Mural",
-    ident: "mural",
-    artistId: "RATA",
-    animation: false,
-    point: {
-      x: 1270,
-      y: 2448,
-      width: 161,
-      height: 146
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "other",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 89,
-    title: "Armos Knight",
-    ident: "bossarmor",
-    artistId: "ZAEB",
-    animation: false,
-    point: {
-      x: 50,
-      y: 2448,
-      width: 160,
-      height: 128
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 90,
-    title: "Moldorm",
-    ident: "boss1",
-    artistId: "NORM",
-    animation: false,
-    point: {
-      x: 250,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 91,
-    title: "Genie",
-    ident: "boss2",
-    artistId: "POTA",
-    animation: false,
-    point: {
-      x: 450,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 92,
-    title: "Slime Eye",
-    ident: "boss3",
-    artistId: "LAMI",
-    animation: false,
-    point: {
-      x: 650,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 93,
-    title: "Angler Fish",
-    ident: "boss4",
-    artistId: "YOKA",
-    animation: false,
-    point: {
-      x: 850,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 94,
-    title: "Slime Eel",
-    ident: "boss5",
-    artistId: "LYZE",
-    animation: false,
-    point: {
-      x: 1050,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 95,
-    title: "Facade",
-    ident: "boss6",
-    artistId: "BLIN_2",
-    animation: false,
-    point: {
-      x: 1490,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 96,
-    title: "Evil Eagle",
-    ident: "boss7",
-    artistId: "DAIZ",
-    animation: false,
-    point: {
-      x: 1685,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 97,
-    title: "Hot Head",
-    ident: "boss8",
-    artistId: "WILP",
-    animation: false,
-    point: {
-      x: 1880,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 98,
-    title: "Shadow Aghinium",
-    ident: "boss9",
-    artistId: "BLIN_2",
-    animation: false,
-    point: {
-      x: 2065,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 99,
-    title: "Shadow Ganon",
-    ident: "boss10",
-    artistId: "MIKE",
-    animation: false,
-    point: {
-      x: 2255,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 100,
-    title: "Shadow Nightmare",
-    ident: "boss11",
-    artistId: "STRA",
-    animation: false,
-    point: {
-      x: 2448,
-      y: 2448,
-      width: 160,
-      height: 144
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "boss",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 101,
-    title: "Intro",
-    ident: "intro",
-    artistId: "OTA0",
-    animation: false,
-    point: {
-      x: 991,
-      y: 50,
-      width: 128,
-      height: 112
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "other",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 102,
-    title: "Menu",
-    ident: "menu",
-    artistId: "M3CH",
-    animation: false,
-    point: {
-      x: 1591,
-      y: 50,
-      width: 160,
-      height: 145
+      x: 192,
+      y: 192
     },
     offset: {
       x: null,

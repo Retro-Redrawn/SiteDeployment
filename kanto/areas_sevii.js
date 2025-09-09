@@ -1,19 +1,21 @@
 var seviiAreas = [
   {
-    order: null,
+    order: 0,
     title: "One Island: Treasure Beach",
     ident: "One-Island-Treasure-Beach",
     artistId: "KARL",
     animation: false,
     point: {
       x: 0,
-      y: 2720
+      y: 2720,
+      width: 320,
+      height: 576
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "surfing",
@@ -29,13 +31,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 0,
-      y: 2432
+      y: 2432,
+      width: 592,
+      height: 288
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -51,13 +55,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 0,
-      y: 1136
+      y: 1136,
+      width: 592,
+      height: 1296
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "surfing",
@@ -74,12 +80,14 @@ var seviiAreas = [
     point: {
       x: 0,
       y: 0,
+      width: 592,
+      height: 1136
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "mountain",
@@ -95,13 +103,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 592,
-      y: 2464
+      y: 2464,
+      width: 640,
+      height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -117,13 +127,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 912,
-      y: 2080
+      y: 2080,
+      width: 320,
+      height: 384
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "town",
@@ -139,13 +151,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 2896,
-      y: 1824
+      y: 1824,
+      width: 640,
+      height: 816
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "town",
@@ -161,13 +175,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 1584,
-      y: 1824
+      y: 1824,
+      width: 1312,
+      height: 272
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "route",
@@ -183,13 +199,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 0,
-      y: 3472
+      y: 3472,
+      width: 624,
+      height: 528
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -205,13 +223,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 2400,
-      y: 4208
+      y: 4208,
+      width: 336,
+      height: 800
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "surfing",
@@ -227,13 +247,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 1760,
-      y: 3936
+      y: 3936,
+      width: 640,
+      height: 544
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -249,13 +271,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 1104,
-      y: 3664
+      y: 3664,
+      width: 976,
+      height: 272
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "surfing",
@@ -271,13 +295,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 1760,
-      y: 3392
+      y: 3392,
+      width: 976,
+      height: 272
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "surfing",
@@ -293,13 +319,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 3068,
-      y: 3392
+      y: 3392,
+      width: 500,
+      height: 1008
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "surfing",
@@ -315,13 +343,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 3136,
-      y: 4400
+      y: 4400,
+      width: 1312,
+      height: 576
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "route",
@@ -337,13 +367,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 3792,
-      y: 4976
+      y: 4976,
+      width: 656,
+      height: 416
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -359,13 +391,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 3408,
-      y: 5392
+      y: 5392,
+      width: 1141,
+      height: 720
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "mountain",
@@ -381,13 +415,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 848,
-      y: 4138
+      y: 4138,
+      width: 576,
+      height: 1062
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "town",
@@ -403,13 +439,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 928,
-      y: 5200
+      y: 5200,
+      width: 861,
+      height: 803
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "mountain",
@@ -425,13 +463,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 1267,
-      y: 6003
+      y: 6003,
+      width: 406,
+      height: 509
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "mountain",
@@ -447,13 +487,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 688,
-      y: 6512
+      y: 6512,
+      width: 1776,
+      height: 272
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "surfing",
@@ -469,13 +511,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 720,
-      y: 2928
+      y: 2928,
+      width: 240,
+      height: 304
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "surfing",
@@ -491,13 +535,15 @@ var seviiAreas = [
     animation: false,
     point: {
       x: 3312,
-      y: 6384
+      y: 6384,
+      width: 400,
+      height: 400
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "vertical",
     type: "surfing",

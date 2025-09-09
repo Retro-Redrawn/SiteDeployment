@@ -27,6 +27,19 @@ var currentZoom = 1; //lerp
 var zoomCenter = {x: 0, y: 0}; // must be whole numbers
 var currentPos = {x: 0, y: 0}; //lerp
 
+// URL Args
+const urlFocus = parseFocusFromUrl();
+// Update layer if applicable
+if (urlFocus&& urlFocus.layer) {
+    for (let i=0; i< redrawnLayers.length; i++) {
+        if (redrawnLayers[i].name === urlFocus.layer) {
+            activeLayerIndex = i;
+            setActiveLayerDOM();
+            break;
+        }
+    }
+}
+
 // Map
 const NEW_STYLE_NAME = 'new';
 const OLD_STYLE_NAME = 'old';
@@ -34,18 +47,21 @@ var activeAreas = redrawnLayers[activeLayerIndex].areas;  // Active array of are
 var layerCount = redrawnLayers.length;  // Total number of layers
 var canvasDimensions = redrawnLayers[activeLayerIndex].canvasSize; // Dimension of active canvas
 var map = null;
+var mapbg;  // Background for the map
+var background; // Background behind the canvas
 var mapImages = null;
 var mapZones = null;
 var currentMapStyle = NEW_STYLE_NAME;
 var viewport = null;
 var bordersDisabled = false;
+var preferStaticImages = false; // When true, use .png versions even if animation is available
 
 // Auto Highlight
-var autoHighlight = true;
+var autoHighlightEnabled = true;
 var highlightedArea = null;
 
 // Filters
-var blurFilter = null;      // Motion blue used when zooming
+var blurFilter = null;      // Motion blur used when zooming
 var bulgeFilter = null;
 var colorFilter = null;      // Used for fade-to-black sequences (e.g. in tour mode)
 
@@ -92,7 +108,6 @@ loadImages()
 window.addEventListener('wheel', onMouseWheel);
 window.addEventListener('resize', onResize);
 window.addEventListener('keydown', onKeyDown);
-//
 
 /** Loads new & old images pertaining to a single layer.
  * 
@@ -102,21 +117,25 @@ window.addEventListener('keydown', onKeyDown);
  * @param {string} layerSubfolder Subfolder directory name of the layer's new & old images.
 */
 function loadLayer (areaArray, areaImageArray, areaOldImageArray, layerSubfolder) {
-    for (var i = 0; i < areaArray.length; i++) 
+    for (let i = 0; i < areaArray.length; i++) 
     {
         var area = areaArray[i];
 
-        // Load new images
+        // Create and set up new image
         var img = new Image();
-        img.src = createImageLink(layerSubfolder, NEW_STYLE_NAME, area.ident, NEW_SLICE_SUFFIX);
-        checkImageLoaded(img, function () { onAreaImageLoaded(areaImageArray); });
-        areaImageArray.push(img);
-        
-        // Load old images
+        areaImageArray.push(img); // Add to array before loading to maintain order
+        // Assign a function as the onload handler (don't call it immediately)
+        img.onload = function() { onAreaImageLoaded(areaImageArray); };
+        // Use GIF extension only when the area explicitly requests animation
+        var newExt = (area && area.animation) ? '.gif' : '.png'; // Use animated image?
+        img.src = createImageLink(layerSubfolder, NEW_STYLE_NAME, area.ident, NEW_SLICE_SUFFIX, newExt);
+            
+        // Create and set up old image
         var oldimg = new Image();
-        oldimg.src = createImageLink(layerSubfolder, OLD_STYLE_NAME, area.ident, OLD_SLICE_SUFFIX);
-        checkImageLoaded(oldimg, function () { onAreaImageLoaded(areaImageArray); });
-        areaOldImageArray.push(oldimg);
+        areaOldImageArray.push(oldimg); // Add to array before loading to maintain order
+        // Assign correct onload handler and pass the old-image array
+        oldimg.onload = function() { onAreaImageLoaded(areaOldImageArray); };
+        oldimg.src = createImageLink(layerSubfolder, OLD_STYLE_NAME, area.ident, OLD_SLICE_SUFFIX, '.png');
     }
 }
 
@@ -127,7 +146,12 @@ function createImageLink (layerName, mapStyle, areaName, mapSuffix) {
     if (!(mapSuffix === undefined || mapSuffix === '')) {
         link += mapSuffix;
     }
-    link += `.png`; 
+    // Default to .png unless an explicit extension is provided as the 5th argument
+    var extension = '.png';
+    if (arguments.length >= 5 && arguments[4]) {
+        extension = arguments[4];
+    }
+    link += extension;
     
     return link;
 }
@@ -135,7 +159,7 @@ function createImageLink (layerName, mapStyle, areaName, mapSuffix) {
 /** Loads all new & old images pertaining to each layer */
 function loadImages () {
 
-    for (var i = 0; i < layerCount; i++) {
+    for (let i = 0; i < layerCount; i++) {
 
         // Need areas in the layer to load images
         if (redrawnLayers[i].areas.length != 0) {
@@ -158,24 +182,6 @@ function onAreaImageLoaded (areaImageArray) {
             completeLoading();
         }
     }
-}
-
-//Check if the image is properly loaded and rendered, .complete does not mean it is rendered and the size is might be set incorrectly
-function checkImageLoaded(img, callback) {
-    img.onload = function () {
-        if (img.naturalHeight > 0 && img.naturalWidth > 0) callback();
-        var counter = 0;
-        var interval = setInterval(function () {
-            counter++;
-            if ((img.naturalHeight > 0 && img.naturalWidth > 0) || counter >= 20) {
-                clearInterval(interval);
-                callback();
-            }
-        }, 500);
-    };
-    img.onerror = function() {
-        callback();
-    };
 }
 
 /** Completes the loading process. */
@@ -214,10 +220,18 @@ function init () {
     }
 
     // Prepare the canvas display
-    setupCanvas();
+    setupCanvas(true);
 
     // Select & focus on a random area & open it in DOM
+    // Use URL-provided area if offered, otherwise random
     var startingArea = activeAreas[Math.floor(Math.random() * activeAreas.length)]
+    if (urlFocus && urlFocus.ident) {
+        const areaToFocus = activeAreas.find(a => a.ident === urlFocus.ident);
+        if (areaToFocus) {
+            startingArea = areaToFocus;
+        }
+    }
+    
     focusOnArea(startingArea)
     openAreaInDOM(startingArea)
 
@@ -226,7 +240,7 @@ function init () {
 }
 
 /** Prepares the canvas display */ 
-function setupCanvas () {
+function setupCanvas (useDefaultPosition) {
     app.stage.removeChildren()
 
     // Establish PIXI containers
@@ -237,7 +251,7 @@ function setupCanvas () {
     map.name = "Map";
 
     if (CANVAS_BACKGROUND_IMAGE !== '') {
-        var mapbg = new PIXI.TilingSprite(new PIXI.Texture.from(CANVAS_BACKGROUND_IMAGE), canvasDimensions.width, canvasDimensions.height)
+        mapbg = new PIXI.TilingSprite(new PIXI.Texture.from(CANVAS_BACKGROUND_IMAGE), canvasDimensions.width, canvasDimensions.height)
         mapbg.name = "Map Background"
         mapbg.zIndex = -1
         map.addChild(mapbg)
@@ -251,9 +265,12 @@ function setupCanvas () {
     mapZones.name = "Map Zones" 
     map.addChild(mapZones)
     
+    let oldx = currentPos.x;
+    let oldy = currentPos.y;
+    
     buildMap()
 
-    var background = new PIXI.Graphics()
+    background = new PIXI.Graphics()
     background.name = "Background Fill"
     background.beginFill(WINDOW_BACKGROUND_COLOR)
     background.drawRect(0,0,window.innerWidth, window.innerHeight)
@@ -283,30 +300,64 @@ function setupCanvas () {
     blurFilter = new PIXI.filters.ZoomBlurFilter()
     bulgeFilter = new PIXI.filters.BulgePinchFilter()
     colorFilter = new PIXI.filters.AlphaFilter()
+    colorFilter.alpha = 1 // Start fully visible (transparent)
+
+    // Apply filters to viewport
+    viewport.filters = [colorFilter]
 
     // Set default position/zoom
-    map.scale.set(zoomMin)
-    map.x = -((map.width) - (window.innerWidth / 2)) * map.scale.x
-    map.y = -((map.height) - (window.innerHeight / 2)) * map.scale.x
+    if (useDefaultPosition) {
+        map.scale.set(zoomMin)
+        map.x = -((map.width) - (window.innerWidth / 2)) * map.scale.x
+        map.y = -((map.height) - (window.innerHeight / 2)) * map.scale.x
 
-    zoomCenter.x = map.x
-    currentPos.x = map.x
-    currentPos.y = map.y
-    zoomCenter.y = map.y
+        currentPos.x = map.x
+        currentPos.y = map.y
+        zoomCenter.x = map.x
+        zoomCenter.y = map.y
+    }
+    else
+    {
+        map.scale.set(currentZoom)
+        map.x = oldx;
+        map.y = oldy;
+        currentPos.x = oldx;
+        currentPos.y = oldy;
+        zoomCenter.x = oldx;
+        zoomCenter.y = oldy;
+    }
 }
 
 function buildMap () {
+    // Properly stop/destroy any existing children (including GIF-backed objects) before clearing
     while (mapImages.children[0]) { 
+        var ch = mapImages.children[0];
+        try {
+            // If the object exposes a stop() or destroy() method, call it
+            if (typeof ch.stop === 'function') { try { ch.stop(); } catch (e) {} }
+            if (typeof ch.destroy === 'function') { try { ch.destroy({children:true, texture:true, baseTexture:true}); } catch (e) { ch.destroy && ch.destroy(); } }
+            // If we attached a GifPlayer, destroy it
+            try { cleanupDisplayObjectGif(ch); } catch (e) {}
+        } catch (e) {}
         mapImages.removeChild(mapImages.children[0]);
     }
-    for (var i = 0; i < activeAreas.length; i++) {
+    for (let i = 0; i < activeAreas.length; i++) {
 
-        // Get area image
+        // Get area image and create a PIXI sprite. If the active image is a GIF (for new style
+        // with area.animation === true) we create a canvas-backed texture and update it each frame.
         var area = activeAreas[i];
-        var src = createImageLink(redrawnLayers[activeLayerIndex].name, currentMapStyle, area.ident);
+        var activeImages = getActiveLayerAreaImages();
+        var areaImage = activeImages[i];
 
-        var sprite = new PIXI.Sprite.from(src);
-        
+            var sprite = null;
+            if (currentMapStyle === NEW_STYLE_NAME && area && area.animation && !preferStaticImages && areaImage && areaImage.src && areaImage.src.match(/\.gif$/i)) {
+                sprite = createCanvasGifSprite(area, areaImage);
+            } else {
+            // Fallback: use the normal texture path
+            var src = createImageLink(redrawnLayers[activeLayerIndex].name, currentMapStyle, area.ident);
+            sprite = new PIXI.Sprite.from(src);
+        }
+
         sprite.name = `AREA: ${redrawnLayers[activeLayerIndex].name} (${currentMapStyle}) - ${area.ident}`;
 
         // Apply offset to new versions (always relative to old versions)
@@ -366,20 +417,20 @@ function RegenerateAreaZones() {
     }
 
     // Cleanup existing zones, if any.
-    for (var i = 0; i < mapZones.children.length; i++) {
+    for (let i = 0; i < mapZones.children.length; i++) {
         var zone = mapZones.children[i];
         zone.destroy();
     }
     mapZones.removeChildren();
 
     // Generate new zones
-    for (var i = 0; i < activeAreas.length; i++) {
+    for (let i = 0; i < activeAreas.length; i++) {
 
         // Prepare PIXI area tile
         var area = activeAreas[i];
         var activeImages = getActiveLayerAreaImages();
         var areaImage = activeImages[i];
-        generateAreaZone(area, areaImage);
+        generateAreaZone(area);
     }
 }
 
@@ -396,14 +447,14 @@ function setUpAreas () {
     RegenerateAreaZones();
 
     // Loop through all active areas
-    for (var i = 0; i < activeAreas.length; i++) {
+    for (let i = 0; i < activeAreas.length; i++) {
 
         var area = activeAreas[i];
 
         // Get biome data
         var backgroundColor = 'rgb(0 0 0)';
         var materialIcon = '';
-        for (var j=0; j< biomes.length; j++) {
+        for (let j=0; j< biomes.length; j++) {
             let biome = biomes[j];
             if (biome.ident === area.type) {
                 backgroundColor = biome.color;
@@ -423,17 +474,26 @@ function setUpAreas () {
             artistImageHTML = artistUrl ? `<a href="${artistUrl}" target="_blank" title="${artistName}">
                 <img src="${artistImgPath}" alt="${artistName}" /></a>` : `<img src="${artistImgPath}" alt="${artistName}" />`;
         }
+
+        var iconBlock = 
+            `<span class="material-icons">
+                ${materialIcon}
+            </span>`;
+
+        for (let k = 0; k< iconFiles.length; k++) {
+            if (iconFiles[k].iconId === materialIcon)
+            {
+                iconBlock = `<img src=${iconFiles[k].path} class="custom-icons">`;
+                k = iconFiles.length;
+            }
+        }
         
         // Prepare the HTML block corresponding to an area and its associated credts
         var html = 
         `<li class="area" title="${area.title}" style="background-color:${backgroundColor}" onclick="focusOnArea('${area.title}')">
             <div class="area__header" >
-                <span class="material-icons">
-                    ${materialIcon}
-                </span>
-                <span>
-                    ${area.title}
-                </span>
+                ${iconBlock}<span>${area.title}</span>
+                <button class="area__copy" title="Copy link" onclick="event.stopPropagation(); copyAreaLink('${redrawnLayers[activeLayerIndex].name}','${area.ident}')">🔗</button>
             </div>
             <div class="area__info">
                 <div class="area__info__inner">
@@ -451,6 +511,35 @@ function setUpAreas () {
     }
 }
 
+// Copy area link to clipboard (uses current path + query params)
+function copyAreaLink(layerName, areaIdent) {
+    var base;
+    try {
+        base = window.location.origin + window.location.pathname;
+    } catch (e) {
+        base = window.location.href.split('?')[0];
+    }
+    var url = base + `?layer=${encodeURIComponent(layerName)}&ident=${encodeURIComponent(areaIdent)}`;
+
+    // Use modern Clipboard API when available (requires HTTPS or localhost)
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        navigator.clipboard.writeText(url)
+        .catch(function(err) {
+            CopyLinkPrompt(url);
+        });
+        return;
+    }
+
+    CopyLinkPrompt(url);
+}
+
+/**
+ * Fallback for older browsers: show prompt with URL for manual copy
+ */
+function CopyLinkPrompt(url) {
+    try { window.prompt('Copy this URL for a direct focus link!', url); } catch (e) { /* ignore */ }
+}
+
 /** Creates a rectangular fill relative to a PIXIjs graphic (effectively its outline) */
 function UpdateFill(graphic, areaBox) {
     if (!bordersDisabled) { // Outline properties
@@ -462,12 +551,11 @@ function UpdateFill(graphic, areaBox) {
 }
 
 /** Creates PIXI Graphics corresponding to new and old versions of an area. */
-function generateAreaZone (area, areaImage) {
+function generateAreaZone(area) {
     if (!area) { console.error('oopsie, no area'); return }
-    if (!areaImage) { console.error('oopsie, no area image'); return }
     var oldZone = new PIXI.Graphics();
     oldZone.name = `ZONE: ${area.ident} (${OLD_STYLE_NAME})`;
-    var areaBox = getAreaBox(area, areaImage, OLD_STYLE_NAME);
+    var areaBox = getAreaBox(area, OLD_STYLE_NAME);
     UpdateFill(oldZone, areaBox);
     oldZone.alpha = 0;
     area.old_zone = oldZone;
@@ -475,7 +563,7 @@ function generateAreaZone (area, areaImage) {
 
     var newZone = new PIXI.Graphics();
     newZone.name = `ZONE: ${area.ident} (${NEW_STYLE_NAME})`;
-    areaBox = getAreaBox(area, areaImage, NEW_STYLE_NAME);
+    areaBox = getAreaBox(area, NEW_STYLE_NAME);
     UpdateFill(newZone, areaBox);
     newZone.alpha = 0;
     area.new_zone = newZone;
@@ -508,22 +596,21 @@ function updateActiveAreaZone () {
 
 /** Gets the position of an area's box, 
  * with an optional offset applied to 'redrawn' maps to accomodate bleeds and stylistic extensions. 
- * Uses source image for width/height properties.
  * 
  * @param {*} area The struct describing the area.
  * @param {*} areaImage The image used for this area.
  * @param {string} styleOverride Forces the returned box dimensions to be based on a particular style, if defined.
  * */
-function getAreaBox (area, areaImage, styleOverride = "") {
+function getAreaBox (area, styleOverride = "") {
     if (!area) { console.error('oopsie, no area'); return }
 
     // Use current style or override?
     var style = styleOverride === "" ? currentMapStyle : styleOverride;
-    
+
     if (style === NEW_STYLE_NAME) {
-        return {x: area.point.x + area.offset.x, y: area.point.y + area.offset.y, width: areaImage.naturalWidth + area.offset.width, height: areaImage.naturalHeight + area.offset.height}
+        return {x: area.point.x + area.offset.x, y: area.point.y + area.offset.y, width: area.point.width + area.offset.width, height: area.point.height + area.offset.height}
     } else {
-        return {x: area.point.x, y: area.point.y, width: areaImage.naturalWidth, height: areaImage.naturalHeight}
+        return {x: area.point.x, y: area.point.y, width: area.point.width, height: area.point.height}
     }
 }
 
@@ -536,7 +623,10 @@ function getAreaImage(area, styleOverride = "") {
 
 /** Actions peformed on update (each frame). */
 function tick () {
-    viewport.filters = []
+
+    let motion_blur_target = MOTIONBLUR_VIEWPORT ? viewport : map;
+    motion_blur_target.filters = []
+
     if (cameraAnimation.progress >= 1) {
         cameraAnimation.playing = false
         cameraAdjustment.progress = 1;
@@ -544,7 +634,7 @@ function tick () {
     if (!cameraAnimation.playing) {
         if (zoomLevel !== currentZoom) {
             if (!blurIsDisabled()) {
-                viewport.filters = [blurFilter]
+                motion_blur_target.filters = [blurFilter]
             }
             currentZoom = lerp(currentZoom, zoomLevel, 0.2)
             if (Math.abs(zoomLevel - currentZoom) < 0.005) { // Floating point rounding
@@ -581,7 +671,7 @@ function tick () {
             instantZoom(pinchForTick.factor, pinchForTick.x, pinchForTick.y)
             if (map.scale.x < zoomMax && map.scale.x > zoomMin) {
                 if (!blurIsDisabled()) {
-                    viewport.filters = [blurFilter]
+                    motion_blur_target.filters = [blurFilter]
                 }
                 blurFilter.strength = .1
                 blurFilter.center = [ pinchForTick.x, pinchForTick.y ]
@@ -627,6 +717,28 @@ function tick () {
         }
     }
     
+    // Update any GIF-backed sprites by drawing the underlying <img> into their canvas and
+    // notifying PIXI that the base texture needs updating.
+    try {
+        if (mapImages && mapImages.children && mapImages.children.length) {
+            for (let mi = 0; mi < mapImages.children.length; mi++) {
+                let child = mapImages.children[mi];
+                if (!child) continue;
+
+                // If the canvas is animated by GifPlayer, just request PIXI to update its base texture
+                if (child._isGif && child._gifCanvas) {
+                    try {
+                        updateGifSprite(child);
+                    } catch (e) {
+                        // ignore per-frame draw errors
+                    }
+                }
+            }
+        }
+    } catch (e) {
+        // ignore overall GIF update errors to avoid breaking the render loop
+    }
+
     requestAnimationFrame(tick)
 }
 
@@ -689,14 +801,25 @@ function onDragEnd () {
 function changeTab (n) {
     var tabs = document.querySelectorAll('.menu__tab')
     var elems = document.querySelectorAll('.menu__content >*')
-    for (var i = 0; i < tabs.length; i++) {
+
+    for (let i = 0; i < tabs.length; i++) {
         var tab = tabs[i]
         tab.classList.remove('active')
         elems[i].classList.remove('active')
     }
+
+    elems[n].scrollTo(0,0); // Reset scroll
+
     tabs[n].classList.add('active')
     elems[n].classList.add('active')
-    elems.children
+
+    // Focus on selected area if in the areas list
+    if (n === 0) {
+        const activeArea = elems[n].querySelector('.area.active');
+        if (activeArea) {
+            activeArea.scrollIntoView();
+        }
+    }
 }
 
 function onClick (e) {
@@ -811,7 +934,9 @@ function zoom(s,x,y){
     zoomCenter.y = zoomCenter.y - (newScreenPos.y-y)
 }
 
-/** Immediately zoom to a particular scale focused around a point. */
+/** 
+ * Immediately zoom to a particular scale focused around a point. 
+ */
 function instantZoom(s,x,y){
 
     // Perform the requested zoom
@@ -827,8 +952,6 @@ function instantZoom(s,x,y){
         currentZoom = zoomLevel
         currentPos = {... zoomCenter}
 
-        // console.log(zoomCenter)
-
         map.x = zoomCenter.x
         map.y = zoomCenter.y
 
@@ -836,6 +959,14 @@ function instantZoom(s,x,y){
     }
 }
 
+/**
+ * Gradually repositions the camera to the specified location.
+ * @param {number} x 
+ * @param {number} y 
+ * @param {number} zoom 
+ * @param {number} camAnimationSpeed 
+ * @param {boolean} useEasing 
+ */
 function moveCameraTo (x, y, zoom, camAnimationSpeed, useEasing) {
     dragVelocity.x = dragVelocity.y = 0
     cameraAnimation.speed = camAnimationSpeed
@@ -857,6 +988,12 @@ function moveCameraTo (x, y, zoom, camAnimationSpeed, useEasing) {
     zoomCenter.y = cameraAnimation.endPos.y
 }
 
+/**
+ * Immediately positions the camera to a specific position with a fixed zoom level.
+ * @param {number} x 
+ * @param {number} y 
+ * @param {number} zoom 
+ */
 function snapCameraTo (x, y, zoom) {
     dragVelocity.x = dragVelocity.y = 0
 
@@ -873,8 +1010,9 @@ function snapCameraTo (x, y, zoom) {
     map.y = position.y
 }
 
-/** Focus on a specified area.
- * accepts name string and object
+/** 
+ * Focus on a specified area. ('a' can be a string or area object)
+ * @param {*} a
  */
 function focusOnArea (a) {
     if (tourMode) {
@@ -884,14 +1022,14 @@ function focusOnArea (a) {
     if (typeof a === 'string') {
         area = activeAreas.find(x => x.title === a)
     }
-    for (var i = 0; i < activeAreas.length; i++) {
+    for (let i = 0; i < activeAreas.length; i++) {
         hideAreaZone(activeAreas[i])
     }
     var isGoodToFocus = true
     showAreaZone(area)
     var elems = document.querySelectorAll(`#areas li`)
     if (elems.length > 0) {
-        for (var i = 0; i < elems.length; i++) {
+        for (let i = 0; i < elems.length; i++) {
             var elem = elems[i]
             if (area.title === elem.title) {
                 if (elem.classList.contains('active')) {
@@ -915,7 +1053,10 @@ function focusOnArea (a) {
     }
 }
 
-/** Opens an area in the DOM menu of the viewer. */
+/** 
+ * Opens an area in the DOM menu of the viewer. ('a' can be a string or area object)
+ * @param {*} a 
+ */
 function openAreaInDOM (a) {
     var area = a
     if (typeof a === 'string') {
@@ -923,7 +1064,7 @@ function openAreaInDOM (a) {
     }
     var elems = document.querySelectorAll(`.area`)
     if (elems.length > 0) {
-        for (var i = 0; i < elems.length; i++) {
+        for (let i = 0; i < elems.length; i++) {
             var elem = elems[i]
             if (area.title === elem.title) {
                 elem.classList.add('active')
@@ -937,6 +1078,11 @@ function openAreaInDOM (a) {
     updateMobileArtist(area);
 
 }
+
+/**
+ * Updates the floating artist badge.
+ * @param {object} area 
+ */
 function updateMobileArtist(area) {
     
     var artistData = GetArtistData(area.artistId);
@@ -1097,21 +1243,25 @@ function checkMapBoundaries () {
 }
 
 function checkAutoHighlight() {
-    if (autoHighlight) {
-        var mapPosition = screenToMapPoint({ x: app.renderer.width / 2, y: app.renderer.height / 2 }, map, currentZoom);
-        if (isMenuOpen()) {
-            mapPosition.x += (150 / currentZoom);//Offset when menu is open (which has a fixed width of 300px)
+    if (!autoHighlightEnabled || !dragging) {
+        return;
+    }
+
+    var mapPosition = screenToMapPoint({ x: app.renderer.width / 2, y: app.renderer.height / 2 }, map, currentZoom);
+
+    if (isMenuOpen()) {
+        let menuWidth = parseInt(window.getComputedStyle(document.getElementById('menu-bar')).width);
+        mapPosition.x += ((menuWidth / 2) / currentZoom); // Offset when menu is open (assumes pixel size)
+    }
+
+    let area = getAreaOnPoint(mapPosition, activeAreas);
+    if (area && highlightedArea != area) {
+        highlightedArea = area;
+        for (let i = 0; i < activeAreas.length; i++) {
+            hideAreaZone(activeAreas[i])
         }
-        var area = getAreaOnPoint(mapPosition, activeAreas);
-        if (area && highlightedArea != area) {
-            // console.log(highlightedArea);
-            highlightedArea = area;
-            for (var i = 0; i < activeAreas.length; i++) {
-                hideAreaZone(activeAreas[i])
-            }
-            showAreaZone(area);
-            openAreaInDOM(area);
-        }
+        showAreaZone(area);
+        openAreaInDOM(area);
     }
 }
 
@@ -1130,7 +1280,7 @@ function easeInOutCubic(x) {
 
 /** Fills an array with arrays */
 function fillWithArrays(array) {
-    for (var i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         array[i] = Array.apply(null, Array(0));
     }
     return array;
@@ -1157,7 +1307,17 @@ function getActiveArea () {
 
 /** Callback occurring when the window is resized. */
 function onResize () {
-    if(app && app.renderer) app.renderer.resize(window.innerWidth, window.innerHeight);
+    if (app && app.renderer) 
+    {
+        app.renderer.resize(window.innerWidth, window.innerHeight);
+
+        // Update map backgroud scope
+        if (background != undefined) 
+        {
+            background.width = window.innerWidth;
+            background.height = window.innerHeight;
+        }
+    }
 }
 
 function changeCameraSpeed (e) {
@@ -1174,25 +1334,121 @@ function changeTourCameraSpeed (e) {
  * 
  * @param {string} layer String name of the layer to change to.
  */
-function changeLayer (layer) {
+function changeLayer(layer) {
 
     // Find and switch layer
-    var layerCount = this.layerCount;
-    for (var i=0; i< layerCount; i++) {
-        if (layer === this.redrawnLayers[i].name) {
-            this.activeLayerIndex = i;
-            this.activeAreas = this.redrawnLayers[i].areas;
-            this.canvasDimensions = this.redrawnLayers[i].canvasSize;
+    for (let i=0; i< layerCount; i++) {
+        if (layer === redrawnLayers[i].name) {
+            activeLayerIndex = i;
+            activeAreas = redrawnLayers[i].areas;
+            canvasDimensions = redrawnLayers[i].canvasSize;
             break;
         }
     }
 
-    // Adjust tab visibility
-    const tabs = document.querySelectorAll('#layers li button')
-    let activeLayerName = this.redrawnLayers[this.activeLayerIndex].name;
-    tabs.forEach((x) => { if (!x.classList.contains(activeLayerName)) {x.classList.remove('active')} else {x.classList.add('active')} })
-    this.setupCanvas()
+    setActiveLayerDOM();
+    setupCanvas(true)
     
     // Adjust canvas focus
-    this.focusOnArea(this.activeAreas[Math.floor(Math.random() * layerCount)])
+    focusOnArea(activeAreas[Math.floor(Math.random() * activeAreas.length)])
+}
+
+/**
+ * Adjusts the visibly selected tab.
+ */
+function setActiveLayerDOM() {
+    // Adjust tab visibility
+    const tabs = document.querySelectorAll('#layers li button')
+    let activeLayerName = redrawnLayers[activeLayerIndex].name;
+    tabs.forEach((x) => { if (!x.classList.contains(activeLayerName)) {x.classList.remove('active')} else {x.classList.add('active')} })
+}
+
+/** Create a PIXI sprite backed by a canvas for the provided HTMLImageElement (GIF fallback).
+ * If GifPlayer is available, it will be used to animate the canvas. Returns the sprite.
+ */
+function createCanvasGifSprite(area, areaImage) {
+    var canvas = document.createElement('canvas');
+    canvas.width = area.point.width || 1;
+    canvas.height = area.point.height || 1;
+    var ctx = canvas.getContext('2d');
+    try { ctx.drawImage(areaImage, 0, 0); } catch (e) { }
+    var texture = PIXI.Texture.from(canvas);
+    var sprite = new PIXI.Sprite(texture);
+    sprite._isGif = true;
+    sprite._gifCanvas = canvas;
+    sprite._gifCtx = ctx;
+    sprite._gifImg = areaImage;
+    try {
+        if (typeof GifPlayer !== 'undefined' && typeof GifPlayer.create === 'function') {
+            sprite._gifPlayer = GifPlayer.create(areaImage.src, canvas);
+            sprite._gifPlayer.start();
+        }
+    } catch (e) { }
+    return sprite;
+}
+
+/** Safely cleanup any GifPlayer attached to a display object and clear canvas refs. */
+function cleanupDisplayObjectGif(obj) {
+    if (!obj) return;
+    try {
+        if (obj._gifPlayer && typeof obj._gifPlayer.destroy === 'function') {
+            try { obj._gifPlayer.destroy(); } catch (e) {}
+        }
+    } catch (e) {}
+    try {
+        if (obj._gifCanvas) {
+            // attempt to clear the canvas to free memory
+            try { obj._gifCtx && obj._gifCtx.clearRect(0,0,obj._gifCanvas.width, obj._gifCanvas.height); } catch (e) {}
+            try { obj._gifCanvas.width = 0; obj._gifCanvas.height = 0; } catch (e) {}
+            obj._gifCanvas = null;
+            obj._gifCtx = null;
+            obj._gifImg = null;
+        }
+    } catch (e) {}
+}
+
+/** Update a gif-backed sprite each frame: prefer GifPlayer-driven canvases, otherwise draw from image.
+ * Keeps PIXI texture up-to-date.
+ */
+function updateGifSprite(sprite) {
+    if (!sprite || !sprite._gifCanvas) return;
+    // If GifPlayer is animating the canvas, just ask PIXI to update the base texture
+    if (sprite._gifPlayer) {
+        if (sprite.texture && sprite.texture.baseTexture && typeof sprite.texture.baseTexture.update === 'function') {
+            sprite.texture.baseTexture.update();
+        }
+        return;
+    }
+
+    // Fallback: draw current frame from image onto canvas and update texture
+    try {
+        const ctx = sprite._gifCtx;
+        if (!ctx || !sprite._gifImg) return;
+        ctx.clearRect(0, 0, sprite._gifCanvas.width, sprite._gifCanvas.height);
+        try { ctx.drawImage(sprite._gifImg, 0, 0, sprite._gifCanvas.width, sprite._gifCanvas.height); } catch (e) {}
+        if (sprite.texture && sprite.texture.baseTexture && typeof sprite.texture.baseTexture.update === 'function') {
+            sprite.texture.baseTexture.update();
+        }
+    } catch (e) {
+        // swallow errors to avoid breaking tick
+    }
+}
+
+/** Parse optional URL focus parameters. Returns {ident, layer} or null. */
+function parseFocusFromUrl() {
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const ident = params.get('ident');
+        const layer = params.get('layer');
+        if (!ident && !layer) return null;
+        return { ident: ident || null, layer: layer || null };
+    } catch (e) {
+        return null;
+    }
+}
+
+/** Called when the user toggles the option to prefer static images over animated GIFs. */
+function onPreferStaticToggled(isStatic) {
+    preferStaticImages = !!isStatic;
+    setupCanvas(false);
 }

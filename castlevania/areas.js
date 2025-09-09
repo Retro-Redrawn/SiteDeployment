@@ -7,7 +7,9 @@ var areas = [
     animation: false,
     point: {
       x: 32,
-      y: 1712
+      y: 1712,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -29,7 +31,9 @@ var areas = [
     animation: false,
     point: {
       x: 416,
-      y: 1712
+      y: 1712,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -51,7 +55,9 @@ var areas = [
     animation: true,
     point: {
       x: 800,
-      y: 1712
+      y: 1712,
+      width: 400,
+      height: 176
     },
     offset: {
       x: null,
@@ -73,7 +79,9 @@ var areas = [
     animation: false,
     point: {
       x: 1200,
-      y: 1712
+      y: 1712,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -95,7 +103,9 @@ var areas = [
     animation: false,
     point: {
       x: 1584,
-      y: 1712
+      y: 1712,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -117,7 +127,9 @@ var areas = [
     animation: false,
     point: {
       x: 1968,
-      y: 1712
+      y: 1712,
+      width: 368,
+      height: 176
     },
     offset: {
       x: null,
@@ -139,7 +151,9 @@ var areas = [
     animation: false,
     point: {
       x: 2336,
-      y: 1712
+      y: 1712,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -161,7 +175,9 @@ var areas = [
     animation: false,
     point: {
       x: 2336,
-      y: 1904
+      y: 1904,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -183,7 +199,9 @@ var areas = [
     animation: false,
     point: {
       x: 2848,
-      y: 1712
+      y: 1712,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -205,7 +223,9 @@ var areas = [
     animation: false,
     point: {
       x: 3360,
-      y: 1712
+      y: 1712,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -227,7 +247,9 @@ var areas = [
     animation: false,
     point: {
       x: 3616,
-      y: 1648
+      y: 1648,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -249,7 +271,9 @@ var areas = [
     animation: false,
     point: {
       x: 3360,
-      y: 1456
+      y: 1456,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -271,7 +295,9 @@ var areas = [
     animation: false,
     point: {
       x: 2976,
-      y: 1456
+      y: 1456,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -293,7 +319,9 @@ var areas = [
     animation: false,
     point: {
       x: 2592,
-      y: 1456
+      y: 1456,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -315,7 +343,9 @@ var areas = [
     animation: false,
     point: {
       x: 2592,
-      y: 1264
+      y: 1264,
+      width: 768,
+      height: 176
     },
     offset: {
       x: null,
@@ -337,7 +367,9 @@ var areas = [
     animation: false,
     point: {
       x: 2208,
-      y: 1264
+      y: 1264,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -359,7 +391,9 @@ var areas = [
     animation: false,
     point: {
       x: 1824,
-      y: 1264
+      y: 1264,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -381,7 +415,9 @@ var areas = [
     animation: false,
     point: {
       x: 2080,
-      y: 1072
+      y: 1072,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -403,7 +439,9 @@ var areas = [
     animation: false,
     point: {
       x: 1824,
-      y: 1072
+      y: 1072,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -425,7 +463,9 @@ var areas = [
     animation: false,
     point: {
       x: 1440,
-      y: 1056
+      y: 1056,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -447,7 +487,9 @@ var areas = [
     animation: false,
     point: {
       x: 1056,
-      y: 1056
+      y: 1056,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -469,7 +511,9 @@ var areas = [
     animation: true,
     point: {
       x: 1056,
-      y: 864
+      y: 864,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -491,7 +535,9 @@ var areas = [
     animation: false,
     point: {
       x: 1440,
-      y: 864
+      y: 864,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -513,7 +559,9 @@ var areas = [
     animation: false,
     point: {
       x: 1824,
-      y: 864
+      y: 864,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -535,7 +583,9 @@ var areas = [
     animation: false,
     point: {
       x: 2208,
-      y: 864
+      y: 864,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -557,7 +607,9 @@ var areas = [
     animation: true,
     point: {
       x: 2080,
-      y: 672
+      y: 672,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -579,7 +631,9 @@ var areas = [
     animation: false,
     point: {
       x: 2592,
-      y: 672
+      y: 672,
+      width: 514,
+      height: 178
     },
     offset: {
       x: null,
@@ -601,7 +655,9 @@ var areas = [
     animation: false,
     point: {
       x: 3104,
-      y: 672
+      y: 672,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -623,7 +679,9 @@ var areas = [
     animation: false,
     point: {
       x: 3488,
-      y: 672
+      y: 672,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -645,7 +703,9 @@ var areas = [
     animation: true,
     point: {
       x: 3872,
-      y: 672
+      y: 672,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -667,7 +727,9 @@ var areas = [
     animation: false,
     point: {
       x: 4384,
-      y: 672
+      y: 672,
+      width: 258,
+      height: 178
     },
     offset: {
       x: null,
@@ -689,7 +751,9 @@ var areas = [
     animation: false,
     point: {
       x: 4384,
-      y: 864
+      y: 864,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -711,7 +775,9 @@ var areas = [
     animation: false,
     point: {
       x: 4384,
-      y: 1040
+      y: 1040,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -733,7 +799,9 @@ var areas = [
     animation: false,
     point: {
       x: 4384,
-      y: 1216
+      y: 1216,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -755,7 +823,9 @@ var areas = [
     animation: false,
     point: {
       x: 4384,
-      y: 1392
+      y: 1392,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -777,7 +847,9 @@ var areas = [
     animation: false,
     point: {
       x: 4384,
-      y: 1568
+      y: 1568,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -799,7 +871,9 @@ var areas = [
     animation: false,
     point: {
       x: 4384,
-      y: 1872
+      y: 1872,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -821,7 +895,9 @@ var areas = [
     animation: true,
     point: {
       x: 4768,
-      y: 1872
+      y: 1872,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -843,7 +919,9 @@ var areas = [
     animation: false,
     point: {
       x: 5152,
-      y: 1872
+      y: 1872,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -865,7 +943,9 @@ var areas = [
     animation: false,
     point: {
       x: 5536,
-      y: 1872
+      y: 1872,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -887,7 +967,9 @@ var areas = [
     animation: false,
     point: {
       x: 5856,
-      y: 1184
+      y: 1184,
+      width: 144,
+      height: 672
     },
     offset: {
       x: null,
@@ -909,7 +991,9 @@ var areas = [
     animation: false,
     point: {
       x: 5856,
-      y: 1008
+      y: 1008,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -931,7 +1015,9 @@ var areas = [
     animation: false,
     point: {
       x: 6240,
-      y: 1008
+      y: 1008,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -953,7 +1039,9 @@ var areas = [
     animation: false,
     point: {
       x: 6624,
-      y: 1008
+      y: 1008,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -975,7 +1063,9 @@ var areas = [
     animation: false,
     point: {
       x: 7008,
-      y: 1008
+      y: 1008,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -997,7 +1087,9 @@ var areas = [
     animation: false,
     point: {
       x: 7392,
-      y: 1008
+      y: 1008,
+      width: 768,
+      height: 176
     },
     offset: {
       x: null,
@@ -1019,7 +1111,9 @@ var areas = [
     animation: false,
     point: {
       x: 8160,
-      y: 1008
+      y: 1008,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1041,7 +1135,9 @@ var areas = [
     animation: false,
     point: {
       x: 8416,
-      y: 1008
+      y: 1008,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -1063,7 +1159,9 @@ var areas = [
     animation: false,
     point: {
       x: 8416,
-      y: 816
+      y: 816,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -1085,7 +1183,9 @@ var areas = [
     animation: false,
     point: {
       x: 8928,
-      y: 816
+      y: 816,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -1107,7 +1207,9 @@ var areas = [
     animation: false,
     point: {
       x: 9440,
-      y: 816
+      y: 816,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1129,7 +1231,9 @@ var areas = [
     animation: true,
     point: {
       x: 9696,
-      y: 816
+      y: 816,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1148,10 +1252,12 @@ var areas = [
     title: "5-6",
     ident: "5-6",
     artistId: "JUAN",
-    animation: false,
+    animation: true,
     point: {
       x: 9440,
-      y: 624
+      y: 624,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -1173,7 +1279,9 @@ var areas = [
     animation: false,
     point: {
       x: 9184,
-      y: 624
+      y: 624,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1195,7 +1303,9 @@ var areas = [
     animation: false,
     point: {
       x: 8672,
-      y: 624
+      y: 624,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -1217,7 +1327,9 @@ var areas = [
     animation: false,
     point: {
       x: 8160,
-      y: 624
+      y: 624,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -1239,7 +1351,9 @@ var areas = [
     animation: true,
     point: {
       x: 8288,
-      y: 432
+      y: 432,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -1261,7 +1375,9 @@ var areas = [
     animation: false,
     point: {
       x: 7904,
-      y: 432
+      y: 432,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -1283,7 +1399,9 @@ var areas = [
     animation: true,
     point: {
       x: 7648,
-      y: 432
+      y: 432,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1305,7 +1423,9 @@ var areas = [
     animation: false,
     point: {
       x: 7264,
-      y: 432
+      y: 432,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -1327,7 +1447,9 @@ var areas = [
     animation: false,
     point: {
       x: 6880,
-      y: 432
+      y: 432,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -1349,7 +1471,9 @@ var areas = [
     animation: false,
     point: {
       x: 6496,
-      y: 432
+      y: 432,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -1371,7 +1495,9 @@ var areas = [
     animation: false,
     point: {
       x: 6112,
-      y: 432
+      y: 432,
+      width: 384,
+      height: 176
     },
     offset: {
       x: null,
@@ -1393,7 +1519,9 @@ var areas = [
     animation: false,
     point: {
       x: 5856,
-      y: 432
+      y: 432,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1415,7 +1543,9 @@ var areas = [
     animation: false,
     point: {
       x: 5856,
-      y: 240
+      y: 240,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1437,7 +1567,9 @@ var areas = [
     animation: true,
     point: {
       x: 5520,
-      y: 240
+      y: 240,
+      width: 336,
+      height: 176
     },
     offset: {
       x: null,
@@ -1459,7 +1591,9 @@ var areas = [
     animation: true,
     point: {
       x: 5344,
-      y: 432
+      y: 432,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -1481,7 +1615,9 @@ var areas = [
     animation: false,
     point: {
       x: 5344,
-      y: 240
+      y: 240,
+      width: 176,
+      height: 176
     },
     offset: {
       x: null,
@@ -1503,7 +1639,9 @@ var areas = [
     animation: false,
     point: {
       x: 4832,
-      y: 240
+      y: 240,
+      width: 512,
+      height: 176
     },
     offset: {
       x: null,
@@ -1525,7 +1663,9 @@ var areas = [
     animation: false,
     point: {
       x: 5088,
-      y: 48
+      y: 48,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1547,7 +1687,9 @@ var areas = [
     animation: true,
     point: {
       x: 4832,
-      y: 48
+      y: 48,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1569,7 +1711,9 @@ var areas = [
     animation: false,
     point: {
       x: 4576,
-      y: 48
+      y: 48,
+      width: 256,
+      height: 176
     },
     offset: {
       x: null,
@@ -1591,7 +1735,9 @@ var areas = [
     animation: false,
     point: {
       x: 192,
-      y: 192
+      y: 192,
+      width: 256,
+      height: 224
     },
     offset: {
       x: null,

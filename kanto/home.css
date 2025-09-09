@@ -14,6 +14,9 @@ a{
     height:100vh;
     position:absolute;
 }
+.menu__disclaimer {
+    text-align: center;
+}
 .rrlogo {
     text-align: center;
 }
@@ -217,6 +220,37 @@ a{
     display:block;
 }
 
+/* Themed scrollbars for menu panels */
+.menu__content, .menu__content > * {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(255,255,255,0.12) transparent;
+}
+
+/* WebKit-based browsers */
+.menu__content::-webkit-scrollbar, .menu__content > *::-webkit-scrollbar {
+    width: 10px;
+}
+.menu__content::-webkit-scrollbar-track, .menu__content > *::-webkit-scrollbar-track {
+    background: transparent;
+}
+.menu__content::-webkit-scrollbar-thumb, .menu__content > *::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+.menu__content::-webkit-scrollbar-thumb:hover, .menu__content > *::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.14);
+}
+
+/* Slightly more prominent when menu is active */
+.menu.active .menu__content > *::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.12);
+}
+.menu.active .menu__content > *::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.18);
+}
+
 .bgmPlayer{
     width: 100%;
 }
@@ -231,8 +265,8 @@ a{
     padding:0;
 }
 #layers li button{
-    width:90%;
-    height:40px;
+    width:85%;
+    height:32px;
     position:relative;
     transition: width .2s;
     cursor: pointer;
@@ -253,10 +287,10 @@ a{
     background-image: url('img/website/sevii_button.png');
 }
 #layers li button:hover{
-    width:95%;
+    width:90%;
 }
 #layers li button.active{
-    width:100%;
+    width:95%;
 }
 
 #layers li button span{
@@ -291,9 +325,15 @@ a{
     cursor:pointer;
     display:flex;
     align-items: center;
+    position: relative;
 }
 .material-icons{
     margin-right:5px;
+}
+.custom-icons{
+    margin-right:5px;
+    width: 24px;
+    height: auto;
 }
 .area__info {
     overflow:hidden;
@@ -470,3 +510,27 @@ a{
     padding-left: 20px;
     padding-right: 20px;
 }
+
+/* Copy button in area header */
+.area__header{ position: relative; }
+.area__copy{
+    position: absolute;
+    right: 6px;
+    top: 40%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    display: none; /* hidden by default */
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+.area__copy .material-icons{ font-size: 16px; line-height: 1; }
+.area__copy:hover{ background: rgba(255,255,255,0.06); }
+
+/* Show copy button only when the area is active */
+.area.active .area__header .area__copy{ display: inline-flex; }

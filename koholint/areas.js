@@ -12,10 +12,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "dungeon",
@@ -36,8 +36,8 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
+      x: 0,
+      y: 0,
       width: null,
       height: null
     },
@@ -60,10 +60,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "mountain",
@@ -81,13 +81,13 @@ var areaData = [
       x: 1010,
       y: 300,
       width: 160,
-      height: 255
+      height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: -1
     },
     pan: "horizontal",
     type: "dungeon",
@@ -108,10 +108,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "mountain",
@@ -132,10 +132,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "mountain",
@@ -156,10 +156,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "mountain",
@@ -180,10 +180,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "dungeon",
@@ -204,10 +204,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -228,10 +228,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -252,10 +252,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "dungeon",
@@ -276,10 +276,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "castle",
@@ -300,10 +300,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -324,10 +324,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "dungeon",
@@ -348,10 +348,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -372,10 +372,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -396,10 +396,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "forest",
@@ -420,10 +420,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "forest",
@@ -444,10 +444,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -468,10 +468,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "underground",
@@ -482,7 +482,7 @@ var areaData = [
   {
     order: 24,
     title: "Kanalet Castle",
-    ident: "3-5",
+    ident: "3-5_3-6",
     artistId: "UNSI",
     animation: false,
     point: {
@@ -492,34 +492,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "castle",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 25,
-    title: "Kanalet Castle 2",
-    ident: "3-6",
-    artistId: "UNSI",
-    animation: false,
-    point: {
-      x: 1650,
-      y: 812,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "castle",
@@ -536,14 +512,14 @@ var areaData = [
     point: {
       x: 1970,
       y: 812,
-      width: 639,
+      width: 640,
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: -1,
+      height: 0
     },
     pan: "horizontal",
     type: "surfing",
@@ -564,10 +540,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "forest",
@@ -588,10 +564,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "forest",
@@ -612,10 +588,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "underground",
@@ -636,10 +612,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "underground",
@@ -660,10 +636,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "castle",
@@ -684,10 +660,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "castle",
@@ -708,10 +684,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "surfing",
@@ -732,10 +708,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "surfing",
@@ -756,10 +732,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -770,7 +746,7 @@ var areaData = [
   {
     order: 49,
     title: "Mabe Village 2",
-    ident: "5-2",
+    ident: "5-2_6-2",
     artistId: "BLIN",
     animation: false,
     point: {
@@ -780,10 +756,10 @@ var areaData = [
       height: 512
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -804,10 +780,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -828,10 +804,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -852,10 +828,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -876,10 +852,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -900,10 +876,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "dungeon",
@@ -924,10 +900,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -944,38 +920,14 @@ var areaData = [
     point: {
       x: 50,
       y: 1580,
-      width: 322,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "town",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 61,
-    title: "Mabe Village 4",
-    ident: "6-2",
-    artistId: "BLIN",
-    animation: false,
-    point: {
-      x: 370,
-      y: 1580,
       width: 320,
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -996,10 +948,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "dungeon",
@@ -1020,10 +972,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -1044,10 +996,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -1068,10 +1020,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -1092,10 +1044,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "dungeon",
@@ -1116,10 +1068,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "castle",
@@ -1129,8 +1081,8 @@ var areaData = [
   },
   {
     order: 69,
-    title: "Beach trail",
-    ident: "7-1",
+    title: "Beach Trail & Tail Cave",
+    ident: "7-1_7-2",
     artistId: "SAMT",
     animation: false,
     point: {
@@ -1140,34 +1092,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "terrace",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 70,
-    title: "Tail Cave",
-    ident: "7-2",
-    artistId: "SAMT",
-    animation: false,
-    point: {
-      x: 370,
-      y: 1836,
-      width: 320,
-      height: 256
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -1188,10 +1116,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -1212,10 +1140,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -1236,10 +1164,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "dungeon",
@@ -1260,10 +1188,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -1284,10 +1212,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "town",
@@ -1308,10 +1236,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "desert",
@@ -1332,10 +1260,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "beach",
@@ -1356,10 +1284,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "beach",
@@ -1380,10 +1308,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -1405,10 +1333,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -1429,10 +1357,10 @@ var areaData = [
       height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "terrace",
@@ -1449,14 +1377,14 @@ var areaData = [
     point: {
       x: 2290,
       y: 2092,
-      width: 318,
-      height: 254
+      width: 320,
+      height: 256
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: -2,
+      height: -2
     },
     pan: "horizontal",
     type: "desert",
@@ -1477,10 +1405,10 @@ var areaData = [
       height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "other",
@@ -1497,14 +1425,14 @@ var areaData = [
     point: {
       x: 1191,
       y: 50,
-      width: 342,
-      height: 216
+      width: 351,
+      height: 222
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: -9,
+      height: -6
     },
     pan: "horizontal",
     type: "other",
@@ -1522,13 +1450,13 @@ var areaData = [
       x: 1270,
       y: 2768,
       width: 160,
-      height: 432
+      height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 288
     },
     pan: "horizontal",
     type: "other",
@@ -1545,14 +1473,14 @@ var areaData = [
     point: {
       x: 1270,
       y: 2448,
-      width: 160,
-      height: 144
+      width: 161,
+      height: 146
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: -1,
+      height: -2
     },
     pan: "horizontal",
     type: "other",
@@ -1573,10 +1501,10 @@ var areaData = [
       height: 128
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "boss",
@@ -1597,10 +1525,10 @@ var areaData = [
       height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "boss",
@@ -1621,10 +1549,10 @@ var areaData = [
       height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "boss",
@@ -1642,13 +1570,13 @@ var areaData = [
       x: 650,
       y: 2448,
       width: 160,
-      height: 128
+      height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: -16
     },
     pan: "horizontal",
     type: "boss",
@@ -1669,10 +1597,10 @@ var areaData = [
       height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "boss",
@@ -1693,10 +1621,10 @@ var areaData = [
       height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "boss",
@@ -1717,10 +1645,10 @@ var areaData = [
       height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "boss",
@@ -1738,13 +1666,13 @@ var areaData = [
       x: 1685,
       y: 2448,
       width: 160,
-      height: 128
+      height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: -16
     },
     pan: "horizontal",
     type: "boss",
@@ -1765,10 +1693,10 @@ var areaData = [
       height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "boss",
@@ -1789,10 +1717,10 @@ var areaData = [
       height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "boss",
@@ -1813,10 +1741,10 @@ var areaData = [
       height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "boss",
@@ -1834,13 +1762,13 @@ var areaData = [
       x: 2448,
       y: 2448,
       width: 160,
-      height: 128
+      height: 144
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: -16
     },
     pan: "horizontal",
     type: "boss",
@@ -1861,10 +1789,10 @@ var areaData = [
       height: 112
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
     },
     pan: "horizontal",
     type: "other",
@@ -1882,13 +1810,13 @@ var areaData = [
       x: 1591,
       y: 50,
       width: 160,
-      height: 144
+      height: 145
     },
     offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
+      x: 0,
+      y: 0,
+      width: 0,
+      height: -1
     },
     pan: "horizontal",
     type: "other",

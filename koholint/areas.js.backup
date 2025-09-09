@@ -7,7 +7,9 @@ var areaData = [
     animation: false,
     point: {
       x: 50,
-      y: 300
+      y: 300,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -29,7 +31,9 @@ var areaData = [
     animation: false,
     point: {
       x: 370,
-      y: 300
+      y: 300,
+      width: 160,
+      height: 256
     },
     offset: {
       x: null,
@@ -48,10 +52,12 @@ var areaData = [
     title: "Tal Tal Mountain Range 2",
     ident: "1-3",
     artistId: "JUAN",
-    animation: true,
+    animation: false,
     point: {
       x: 530,
-      y: 300
+      y: 300,
+      width: 480,
+      height: 256
     },
     offset: {
       x: null,
@@ -73,7 +79,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1010,
-      y: 300
+      y: 300,
+      width: 160,
+      height: 255
     },
     offset: {
       x: null,
@@ -95,7 +103,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1170,
-      y: 300
+      y: 300,
+      width: 480,
+      height: 256
     },
     offset: {
       x: null,
@@ -117,7 +127,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1650,
-      y: 300
+      y: 300,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -139,7 +151,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1970,
-      y: 300
+      y: 300,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -161,7 +175,9 @@ var areaData = [
     animation: false,
     point: {
       x: 2290,
-      y: 300
+      y: 300,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -183,7 +199,9 @@ var areaData = [
     animation: false,
     point: {
       x: 50,
-      y: 556
+      y: 556,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -205,7 +223,9 @@ var areaData = [
     animation: false,
     point: {
       x: 370,
-      y: 556
+      y: 556,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -227,7 +247,9 @@ var areaData = [
     animation: false,
     point: {
       x: 690,
-      y: 556
+      y: 556,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -249,7 +271,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1010,
-      y: 556
+      y: 556,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -271,7 +295,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1330,
-      y: 556
+      y: 556,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -293,7 +319,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1650,
-      y: 556
+      y: 556,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -315,7 +343,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1970,
-      y: 556
+      y: 556,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -337,7 +367,9 @@ var areaData = [
     animation: false,
     point: {
       x: 2290,
-      y: 556
+      y: 556,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -359,7 +391,9 @@ var areaData = [
     animation: false,
     point: {
       x: 50,
-      y: 812
+      y: 812,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -381,7 +415,9 @@ var areaData = [
     animation: false,
     point: {
       x: 370,
-      y: 812
+      y: 812,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -400,10 +436,12 @@ var areaData = [
     title: "Crazy Tracy\u2019s Health Spa",
     ident: "3-3",
     artistId: "DAIZ",
-    animation: true,
+    animation: false,
     point: {
       x: 690,
-      y: 812
+      y: 812,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -425,7 +463,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1010,
-      y: 812
+      y: 812,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -447,7 +487,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1330,
-      y: 812
+      y: 812,
+      width: 640,
+      height: 256
     },
     offset: {
       x: null,
@@ -469,7 +511,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1650,
-      y: 812
+      y: 812,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -488,10 +532,12 @@ var areaData = [
     title: "Rapid Ride",
     ident: "3-7",
     artistId: "KENC",
-    animation: true,
+    animation: false,
     point: {
       x: 1970,
-      y: 812
+      y: 812,
+      width: 639,
+      height: 256
     },
     offset: {
       x: null,
@@ -513,7 +559,9 @@ var areaData = [
     animation: false,
     point: {
       x: 50,
-      y: 1068
+      y: 1068,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -532,10 +580,12 @@ var areaData = [
     title: "Mysterious Forest 3",
     ident: "4-2",
     artistId: "NOP0",
-    animation: true,
+    animation: false,
     point: {
       x: 370,
-      y: 1068
+      y: 1068,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -557,7 +607,9 @@ var areaData = [
     animation: false,
     point: {
       x: 690,
-      y: 1068
+      y: 1068,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -579,7 +631,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1010,
-      y: 1068
+      y: 1068,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -601,7 +655,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1330,
-      y: 1068
+      y: 1068,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -623,7 +679,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1650,
-      y: 1068
+      y: 1068,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -645,7 +703,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1970,
-      y: 1068
+      y: 1068,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -667,7 +727,9 @@ var areaData = [
     animation: false,
     point: {
       x: 2290,
-      y: 1068
+      y: 1068,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -689,7 +751,9 @@ var areaData = [
     animation: false,
     point: {
       x: 50,
-      y: 1324
+      y: 1324,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -711,7 +775,9 @@ var areaData = [
     animation: false,
     point: {
       x: 370,
-      y: 1324
+      y: 1324,
+      width: 320,
+      height: 512
     },
     offset: {
       x: null,
@@ -733,7 +799,9 @@ var areaData = [
     animation: false,
     point: {
       x: 690,
-      y: 1324
+      y: 1324,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -755,7 +823,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1010,
-      y: 1324
+      y: 1324,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -774,10 +844,12 @@ var areaData = [
     title: "Telephone Booth",
     ident: "5-5",
     artistId: "BG00",
-    animation: true,
+    animation: false,
     point: {
       x: 1330,
-      y: 1324
+      y: 1324,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -799,7 +871,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1650,
-      y: 1324
+      y: 1324,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -821,7 +895,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1970,
-      y: 1324
+      y: 1324,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -843,7 +919,9 @@ var areaData = [
     animation: false,
     point: {
       x: 2290,
-      y: 1324
+      y: 1324,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -865,7 +943,9 @@ var areaData = [
     animation: false,
     point: {
       x: 50,
-      y: 1580
+      y: 1580,
+      width: 322,
+      height: 256
     },
     offset: {
       x: null,
@@ -887,7 +967,9 @@ var areaData = [
     animation: false,
     point: {
       x: 370,
-      y: 1580
+      y: 1580,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -909,7 +991,9 @@ var areaData = [
     animation: false,
     point: {
       x: 690,
-      y: 1580
+      y: 1580,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -931,7 +1015,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1010,
-      y: 1580
+      y: 1580,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -953,7 +1039,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1330,
-      y: 1580
+      y: 1580,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -975,7 +1063,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1650,
-      y: 1580
+      y: 1580,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -994,10 +1084,12 @@ var areaData = [
     title: "Southern Face Shrine",
     ident: "6-7",
     artistId: "AINA",
-    animation: true,
+    animation: false,
     point: {
       x: 1970,
-      y: 1580
+      y: 1580,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1016,10 +1108,12 @@ var areaData = [
     title: "Ruins",
     ident: "6-8",
     artistId: "RUNT",
-    animation: true,
+    animation: false,
     point: {
       x: 2290,
-      y: 1580
+      y: 1580,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1041,7 +1135,9 @@ var areaData = [
     animation: false,
     point: {
       x: 50,
-      y: 1836
+      y: 1836,
+      width: 640,
+      height: 256
     },
     offset: {
       x: null,
@@ -1063,7 +1159,9 @@ var areaData = [
     animation: false,
     point: {
       x: 370,
-      y: 1836
+      y: 1836,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1082,10 +1180,12 @@ var areaData = [
     title: "Signpost Maze",
     ident: "7-3",
     artistId: "ALWO",
-    animation: true,
+    animation: false,
     point: {
       x: 690,
-      y: 1836
+      y: 1836,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1107,7 +1207,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1010,
-      y: 1836
+      y: 1836,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1129,7 +1231,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1330,
-      y: 1836
+      y: 1836,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1151,7 +1255,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1650,
-      y: 1836
+      y: 1836,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1173,7 +1279,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1970,
-      y: 1836
+      y: 1836,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1195,7 +1303,9 @@ var areaData = [
     animation: false,
     point: {
       x: 2290,
-      y: 1836
+      y: 1836,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1211,35 +1321,15 @@ var areaData = [
   },
   {
     order: 77,
-    title: "Toronbo Shores",
-    ident: "8-1",
+    title: "Toronbo Shores & Sales\u2019 House o\u2019 Bananas",
+    ident: "8-1_8-2",
     artistId: "DEWN",
     animation: false,
     point: {
       x: 50,
-      y: 2092
-    },
-    offset: {
-      x: null,
-      y: null,
-      width: null,
-      height: null
-    },
-    pan: "horizontal",
-    type: "beach",
-    zoom: 2,
-    teleporters: [],
-    post_url: ""
-  },
-  {
-    order: 78,
-    title: "Sales\u2019 House o\u2019 Bananas",
-    ident: "8-2",
-    artistId: "DEWN",
-    animation: false,
-    point: {
-      x: 370,
-      y: 2092
+      y: 2092,
+      width: 640,
+      height: 256
     },
     offset: {
       x: null,
@@ -1261,7 +1351,9 @@ var areaData = [
     animation: false,
     point: {
       x: 690,
-      y: 2092
+      y: 2092,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1283,7 +1375,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1010,
-      y: 2092
+      y: 2092,
+      width: 480,
+      height: 256
     },
     offset: {
       x: null,
@@ -1306,7 +1400,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1490,
-      y: 2092
+      y: 2092,
+      width: 480,
+      height: 256
     },
     offset: {
       x: null,
@@ -1328,7 +1424,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1970,
-      y: 2092
+      y: 2092,
+      width: 320,
+      height: 256
     },
     offset: {
       x: null,
@@ -1350,7 +1448,9 @@ var areaData = [
     animation: false,
     point: {
       x: 2290,
-      y: 2092
+      y: 2092,
+      width: 318,
+      height: 254
     },
     offset: {
       x: null,
@@ -1372,7 +1472,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1270,
-      y: 2608
+      y: 2608,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1394,7 +1496,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1191,
-      y: 50
+      y: 50,
+      width: 342,
+      height: 216
     },
     offset: {
       x: null,
@@ -1416,7 +1520,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1270,
-      y: 2768
+      y: 2768,
+      width: 160,
+      height: 432
     },
     offset: {
       x: null,
@@ -1438,7 +1544,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1270,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1460,7 +1568,9 @@ var areaData = [
     animation: false,
     point: {
       x: 50,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 128
     },
     offset: {
       x: null,
@@ -1482,7 +1592,9 @@ var areaData = [
     animation: false,
     point: {
       x: 250,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1504,7 +1616,9 @@ var areaData = [
     animation: false,
     point: {
       x: 450,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1526,7 +1640,9 @@ var areaData = [
     animation: false,
     point: {
       x: 650,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 128
     },
     offset: {
       x: null,
@@ -1548,7 +1664,9 @@ var areaData = [
     animation: false,
     point: {
       x: 850,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1570,7 +1688,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1050,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1592,7 +1712,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1490,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1614,7 +1736,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1685,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 128
     },
     offset: {
       x: null,
@@ -1636,7 +1760,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1880,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1658,7 +1784,9 @@ var areaData = [
     animation: false,
     point: {
       x: 2065,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1680,7 +1808,9 @@ var areaData = [
     animation: false,
     point: {
       x: 2255,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,
@@ -1702,7 +1832,9 @@ var areaData = [
     animation: false,
     point: {
       x: 2448,
-      y: 2448
+      y: 2448,
+      width: 160,
+      height: 128
     },
     offset: {
       x: null,
@@ -1724,7 +1856,9 @@ var areaData = [
     animation: false,
     point: {
       x: 991,
-      y: 50
+      y: 50,
+      width: 128,
+      height: 112
     },
     offset: {
       x: null,
@@ -1746,7 +1880,9 @@ var areaData = [
     animation: false,
     point: {
       x: 1591,
-      y: 50
+      y: 50,
+      width: 160,
+      height: 144
     },
     offset: {
       x: null,

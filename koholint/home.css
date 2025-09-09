@@ -5,6 +5,11 @@ html, body {
     background-color:#000;
     font-family: 'Roboto', sans-serif;
 	font-size: 1em;
+    /* Safe area for mobile */
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
 }
 a{
     color:currentColor;
@@ -143,7 +148,7 @@ a{
 .menu__inner{
     padding:10px;
     padding-right:20px;
-    padding-bottom: 20px; /* extra bottom padding so menu items aren't obscured by action bars */
+    padding-bottom: calc(20px + env(safe-area-inset-bottom)); /* extra bottom padding + safe area */
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -403,10 +408,10 @@ a{
     margin-bottom:10px;
 }
 .content {
-  padding-top: env(safe-area-inset-top);
-  padding-right: env(safe-area-inset-right);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
 }
 .loading-bar{
     width:100%;

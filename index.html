@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="favicon.ico">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Collaborative Redrawn Projects of the Games we love">
+	<meta name="author" content="Tyson Moll, Foofarawr, Retro Redrawn Team">
+	<meta property="og:title" content="Retro Redrawn">
+	<meta property="og:description" content="Collaborative Redrawn Projects of the Games we love">
+	<meta property="og:image" content="https://retroredrawn.com/img/retroredrawn_og.png">
+	<meta property="og:url" content="https://retroredrawn.com">
+	<title>Retro Redrawn</title>
+	<link href="https://fonts.googleapis.com/css?family=Gabarito:700,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #181818;
+      --card-bg: #232323cc;
+      --accent: #fff;
+      --text-main: #f0eeeb;
+      --text-secondary: #a3a3a3;
+    }
+    a:link,
+	a:visited,
+	a:hover,
+	a:active {
+	  color: inherit;
+	  text-decoration: none;
+	}
+	body {
+	  background-image: url('img/pattern.png');
+      background-repeat: repeat;
+      margin: 0;
+      font-family: 'Gabarito', Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      background: linear-gradient(90deg, #232323 0%, #22223b 100%);
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+    }
+	.header-image {
+	display: block;
+	margin: 0 auto 1rem auto;
+	width: 100%;
+	max-width: 700px;
+	height: auto;
+	}
+    header h1 {
+      margin: 0;
+	  padding: 1rem;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    main {
+      width: 100%;
+      max-width: 900px;
+      padding: 2rem 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 24px #0008;
+      padding: 1rem 1rem 2rem 1rem;
+      transition: transform 0.15s;
+    }
+    .card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 8px 32px #000a;
+    }
+    .card h2 {
+      margin-top: 0;
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .card p {
+      color: var(--text-secondary);
+      margin-bottom: 0;
+      font-size: 1.1rem;
+    }
+	.upcoming {
+	  filter: grayscale(100%);
+	  -webkit-filter: grayscale(100%);
+	}
+	.image-wrapper {
+	  position: relative;
+	  display: inline-block;
+	  width: 100%;
+	}
+	.card-image {
+	  display: block;
+	  width: 100%;
+	  height: auto;
+	}
+	.card-overlay {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 10;
+	  pointer-events: none;
+	}
+	footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    @media (min-width: 600px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width: 900px) {
+      main {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }	
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/retroredrawn.png" alt="Retro Redrawn" style="width:90%; border-radius:0.5rem 0.5rem 0 0;" class="header-image" id="sitelogo">
+	<h1> Collaborative redrawn projects of the games we love!</h1>
+  </header>
+  <main>
+  <div class="card">
+	<a href="https://retroredrawn.com/koholint/index.html" target="_blank"><img src="img/koholintredrawn.png" alt="Koholint Redrawn" style="width:100%;"></a>
+    <h2>Koholint Redrawn</h2>
+    <p>Rise and shine on the beautiful shores of Koholint Island.</p>
+  </div>
+  <div class="card">
+    <a href="https://retroredrawn.com/kanto/index.html" target="_blank"><img src="img/kantoredrawn.png" alt="Kanto Redrawn" style="width:100%;"></a>
+    <h2>Kanto Redrawn</h2>
+    <p>Revisit Kanto, the region where it all started!</p>
+  </div>
+  <div class="card">
+    <a href="https://retroredrawn.com/castlevania/index.html" target="_blank"><img src="img/castlevaniaredrawn.png" alt="Castlevania Redrawn" style="width:100%;"></a>
+    <h2>Castlevania Redrawn</h2>
+    <p>Castle Dracula rises again!</p>
+  </div>
+  <div class="card">
+    <a href="https://hyruleredrawn.github.io/zeldaNES/" target="_blank"><img src="img/hyruleredrawn.png" alt="Hyrule Redrawn" style="width:100%;"></a>
+    <h2>Hyrule Redrawn</h2>
+    <p>Experience the original Hyrule in a brand new light!</p>
+  </div>
+  <div class="card">
+    <a href="https://retroredrawn.com/johto/index.html" target="_blank"><img src="img/johtoredrawn.png" alt="Johto Redrawn" style="width:100%;"></a>
+    <h2>Johto Redrawn</h2>
+    <p>Return to Johto, a region of radiant sunrises and powerful torrents!</p>
+  </div>
+  <div class="card">
+    <a href="https://discord.gg/Bjh34VzzbW">
+	<div class="image-wrapper">
+			<img src="img/kirbyredrawn.png" class="upcoming" alt="Kirby Redrawn" style="width:100%;" class="card-image" >
+			<img src="img/inprogress.gif" alt="Project in Progress" class="card-overlay">
+		</div></a>
+    <h2>Kirby Redrawn</h2>
+    <p>Ongoing project! Join us on discord if you're interested!</p>
+  </div>
+
+<div class="card">
+    <a href="https://discord.gg/Bjh34VzzbW">
+	<div class="image-wrapper">
+			<img src="img/pikminredrawn.png" class="upcoming" alt="Pikmin Redrawn" style="width:100%;" class="card-image" >
+			<img src="img/inprogress.gif" alt="Project in Progress" class="card-overlay">
+		</div></a>
+    <h2>Pikmin Redrawn</h2>
+    <p>Ongoing project! Join us on discord if you're interested!</p>
+  </div>
+  <div class="card">
+    <img src="img/mario3redrawn.png" class="upcoming" alt="Super Mario Bros 3 Redrawn" style="width:100%;">
+    <h2>Mario 3 Redrawn</h2>
+    <p>Website launching in September 2025!</p>
+  </div>
+<div class="card">
+    <a href="https://discord.gg/Bjh34VzzbW"><img src="img/discordcard.png" alt="Retro Redrawn Discord" style="width:100%;"></a>
+    <h2>... and other projects!</h2>
+    <p>Join our discord server to stay up to date and maybe even participate in a collab!</p>
+  </div>
+</main>
+  <footer>
+      &copy; 2025 Retro Redrawn | <a href="https://discord.gg/Bjh34VzzbW">Discord</a> | <a href="https://bsky.app/profile/retroredrawn.bsky.social">Bluesky</a>
+  </footer>
+</body>
+</html>

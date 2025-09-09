@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kanto Redrawn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"> <!--App should handle scaling-->
+    <meta property="og:title" content="Kanto Redrawn">
+    <meta property="og:site_name" content="Retro Redrawn">
+    <meta property="og:url" content="https://retroredrawn.com/">
+    <meta property="og:description" content="Kanto Redrawn is a collaborative art project by a group of passionate pixel artists from across the world.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img\website\kanto_redrawn_logo_1x.png"><!---->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!--Google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--PIXI-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.12/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi-filters@4.2/dist/pixi-filters.js"></script>
+    
+    <!--Retro Redrawn: CSS-->
+    <link rel="stylesheet" href="home.css">
+</head>
+<body class="content">
+    <div id="app">
+        <canvas id="canvas"></canvas>
+        <div id="error"></div>
+        <div class="menu active">
+            <div class="menu__button" onclick="toggleMenu()"></div>
+            <div class="menu__inner">
+                <div class="menu__logo">
+                    <a href="https://bsky.app/profile/retroredrawn.bsky.social" title="Visit our BlueSky!" target="_blank">
+                        <img src="img/website/kanto_redrawn_logo.png" alt="Kanto Redrawn" draggable="false" />
+                    </a>
+                </div>
+                <div style="text-align: center;">
+                    <p>
+                    Redrawn
+                    <label class="switch">
+                        <input type="CheckBox" id="mapSelectRedrawn" onclick="toggleMapStyle()">
+                        <span class="slider"></span>
+                    </label>
+                    Original
+                </div>
+                <div class="menu__actions">
+                    <button onclick="changeTab(0)" class="menu__tab active">
+                        Area List
+                    </button>
+                    <button onclick="changeTab(1)" class="menu__tab">
+                        Features
+                    </button>
+                    <button onclick="changeTab(2)" class="menu__tab">
+                        About
+                    </button>
+                </div>
+                <div class="menu__content">
+                    
+                    <div id="areaList" class="active">
+                        <ul id="layers">
+                            <li><button onclick="changeLayer('kanto')" class="kanto active"><span>Kanto</span></button></li>
+                            <li><button onclick="changeLayer('interior')" class="interior"><span>Interiors</span></button></li>
+                            <li><button onclick="changeLayer('sevii')" class="sevii"><span>Sevii Islands</span></button></li>
+                        </ul>
+                        <hr>
+                        <ul id="areas"></ul>
+                    </div>
+                    <div id="settings" style="text-align: center;">
+                        <hr>
+                        <div>
+                            <input class="settings__checkbox" type="checkbox" id="disableBlur"><label for="disableBlur">Disable Zoom Blur</label> <br><br>
+                            <input class="settings__checkbox" type="checkbox" id="areaBorderToggle" oninput="onAreaBorderToggled(this.checked)"><label for="areaBorderToggle">Hide Area Border</label> 
+                        </div><br>
+                        <hr>
+                        <div>
+                            <label>Camera Speed</label><br>
+                            <input type="range" min="0.5" max="2" value="1" step="0.25" id="cameraSpeed" oninput="changeCameraSpeed(this.value)">
+                            <small>1x</small>
+                        </div>
+                        <div>
+                            <label>Tour Speed</label><br>
+                            <input type="range" min="0.5" max="2" value="1" step="0.25" id="tourCameraSpeed" oninput="changeTourCameraSpeed(this.value)">
+                            <small>1x</small>
+                        </div>
+                        <hr>
+                    </div>
+                    <div id="about">
+                        <p>Kanto Redrawn is a collaborative art project by a group of passionate pixel artists from across the world.</p>
+                        <p>The project is an artistic reimagining of the Kanto region as seen in the first generation of Pokémon games and their sequels.</p>
+                        <hr>
+                        Check out more projects at...
+                        <div class="rrlogo">
+                            <a href="https://retroredrawn.com/"><img id="rrlogo_img" src="img/website/retro_redrawn_logo.png" alt="Retro Redrawn Logo"></a>
+                        </div>
+                        <hr>
+                        <p><b>Credits</b></p>
+                        <p>The site is the collaborative work of the Retro Redrawn community and is maintained by the Retro Redrawn organizational team.</p>
+                        <p>Organized by <a href="https://linktr.ee/foofarawr" target="_blank">@foofarawr</a></p>    
+                        <p>Backend development, maintenance and refactoring by <a href="https://bsky.app/profile/vvvultures.bsky.social" target="_blank">@vvvultures</a></p>
+                        <p>Based on Johto Redrawn, developed by <a href="https://bsky.app/profile/hyperjerk.bsky.social" target="_blank">@HyperJerk</a></p>
+						<p>General site maintenance and support by <a href="https://linktr.ee/blindeduif" target="_blank">@blindeduif</a></p>
+                        <p>"Vermillion City" BGM by <a href="https://pokerusproject.bandcamp.com/">Pokérus Project</a></p>
+                        <p>"Route 12" BGM by Tori Roberts (<a href="https://bsky.app/profile/toribobs.bsky.social">@torrybobs</a>)</p>
+                        <p>Sevii 'original' maps contributed by foofarawr, <a href="https://bsky.app/profile/anima-nel.bsky.social">anima_nel</a> & <a href="https://www.artstation.com/ckelsallpixels">ckelsallpixels</a>.</p>
+                        <hr>
+                        <p><b>Disclaimer</b></p>
+                        <p>Kanto Redrawn is non-profit gallery for a collaborative fan art project and is in no way affiliated with or authorised by the original rights holders.<p></p>
+                        <hr>
+                        <p><b>Issues?</b></p>
+                        <p>Map requires WebGL compatible browsers - Chrome may require you <a href="https://www.howtogeek.com/412738/how-to-turn-hardware-acceleration-on-and-off-in-chrome/" target="_blank">enable hardware acceleration.</a></p>
+                        <p><a href="https://github.com/retro-redrawn/KantoRedrawn" target="_blank">Site issues? File a report on GitHub!</a></p>						
+
+                    </div>
+                </div>
+                <br>
+                <div class="bgm">
+                    <label>Vermilion City - Pokerus Project</label>
+                    <audio class="bgmPlayer" controls loop> 
+                        <source src="audio/VermilionCity_PokerusPr.mp3" type="audio/mpeg" autoplay="false">
+                    </audio><br>
+                    <label>Route 12 - Toribobs</label>
+                    <audio class="bgmPlayer" controls loop>
+                        <source src="audio/Route12_Toribobs.mp3" type="audio/mpeg" autoplay="false">
+                    </audio>
+                </div>
+                <div class="tour">
+                    <button id="tourButton" onclick="toggleTour()"><span class="material-icons">play_arrow</span> <span>Begin Tour</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="artist_mobile area__info__inner">
+            <div class="area__info__img">
+                <a href="" target="_blank" title="">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div class="area__info__name">
+                <a href="" target="_blank" title=""></a>
+            </div>
+        </div>
+
+        <div id="loading" class="active">
+            <div>
+                <img src="img/website/kanto_redrawn_logo.png" alt="Kanto Redrawn" draggable="false" />
+                <p>Loading...</p>
+                <div class="loading-bar">
+                    <div class="loading-bar__inner" style="width: auto;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--Retro Redrawn: JS-->
+<!--Since we want to ensure the document is fully loaded, we run our scripts last.-->
+<script src="areas_outdoors.js"></script>
+<script src="areas_interiors.js"></script>
+<script src="areas_sevii.js"></script>
+<script src="https://retro-redrawn.github.io/Retro-Redrawn-Data/ArtistData.js"></script>
+<script src="https://retro-redrawn.github.io/Retro-Redrawn-Data/RedrawnArtistDataUtils.js"></script>
+<script src="implementation.js"></script>
+<script src="interactive.js"></script>
+<script src="maputils.js"></script>
+
+</html>

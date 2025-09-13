@@ -39,7 +39,6 @@
                         <img src="img/website/smb3_logo_text.png" alt="Super Mario 3 Redrawn" draggable="false" />
                     </a>
                 </div>
-
                 <div class="menu__actions">
                     <button onclick="changeTab(0)" class="menu__tab active">
                         Area List
@@ -111,45 +110,45 @@
                         <p><b>Credits</b></p>
                         <p>Project Organized by <a href="https://bsky.app/profile/dewdneym.bsky.social" target="_blank">@Dewdneym</a>, <a href="https://linktr.ee/blindeduif" target="_blank">@Blindeduif</a>, <a href="https://bsky.app/profile/vvvultures.bsky.social" target="_blank">@vvvultures</a>, and <a href="https://bsky.app/profile/foofarawr.bsky.social" target="_blank">@foofarawr</a></p>
                         <p>Gallery viewer tooling and maintenance by <a href="https://bsky.app/profile/vvvultures.bsky.social" target="_blank">@vvvultures</a></p>
-                        <p>'Super Mario Bros 3 Atheltic Medley' BGM by <a href="https://bsky.app/profile/toribobs.bsky.social">@toribobs</a> and <a href="https://www.youtube.com/@pokerusproject">@Pokerus</a></p>
+                        <p>'Super Mario Bros 3 Atheltic Medley' BGM by <a href="https://bsky.app/profile/toribobs.bsky.social">@toribobs</a> and <a href="https://www.youtube.com/@pokerusproject">@PokerusProject</a></p>
                         <p>Based on the Retro Redrawn core project by <a href="https://bsky.app/profile/hyperjerk.bsky.social" target="_blank">@HyperJerk</a> and <a href="https://bsky.app/profile/vvvultures.bsky.social" target="_blank">@vvvultures</a></p>
                         <p>Any and all artists who contributed to this project!</p>
                         <p><b>Disclaimer</b></p>
                         <p>This is non-profit gallery for a collaborative fan art project and is in no way affiliated with This is a fan art project - it is in no way affiliated with or authorised by the original rights holders and not a functional game map.  <p>Map requires WebGL compatible browsers - Chrome may require you <a href="https://www.howtogeek.com/412738/how-to-turn-hardware-acceleration-on-and-off-in-chrome/" target="_blank">enable hardware acceleration.</a></p>
-
+                    </div>
                     <br>
                 </div>
-            </div>
-            <div class="map-toggle">
-                <span class="map-toggle-label">Redrawn</span>
-                <label class="switch">
-                    <input type="checkbox" id="mapSelectRedrawn" onclick="toggleMapStyle()">
-                    <span class="slider"></span>
-                </label>
-                <span class="map-toggle-label">Original</span>
-                <div class="tour">
-                    <button id="tourButton" onclick="toggleTour()"><span class="material-icons">play_arrow</span></button>
-                </div>
-            </div>
-            <div class="bgm">
-                <div class="custom-player" data-player-num="0" data-autoplay="true">
-                    <div class="player-controls">
-                        <button class="control-btn" data-control="restart" title="Restart"><span class="material-icons">replay</span></button>
-                        <button class="control-btn" data-control="play-pause" title="Play/Pause"><span class="material-icons">play_arrow</span></button>
-                        <div class="progress-container">
-                            <div class="progress-bar">
-                                <div class="progress"></div>
-                            </div>
-                            <span class="time-display">0:00</span>
-                        </div>
-                        <button class="control-btn" data-control="next" title="Next"><span class="material-icons">skip_next</span></button>
+                <div class="map-toggle">
+                    <span class="map-toggle-label">Redrawn</span>
+                    <label class="switch">
+                        <input type="checkbox" id="mapSelectRedrawn" onclick="toggleMapStyle()">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="map-toggle-label">Original</span>
+                    <div class="tour">
+                        <button id="tourButton" onclick="toggleTour()"><span class="material-icons">play_arrow</span></button>
                     </div>
-                    <div class="track-info-container">
-                        <div class="track-info-scroll">
-                            <div class="track-info">
-                                <span class="track-title"></span>
-                                <span class="track-info-separator">by</span>
-                                <span class="track-artist"></span>
+                </div>
+                <div class="bgm">
+                    <div class="custom-player" data-player-num="0" data-autoplay="true">
+                        <div class="player-controls">
+                            <button class="control-btn" data-control="restart" title="Restart"><span class="material-icons">replay</span></button>
+                            <button class="control-btn" data-control="play-pause" title="Play/Pause"><span class="material-icons">play_arrow</span></button>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                            <button class="control-btn" data-control="next" title="Next"><span class="material-icons">skip_next</span></button>
+                        </div>
+                        <div class="track-info-container">
+                            <div class="track-info-scroll">
+                                <div class="track-info">
+                                    <span class="track-title"></span>
+                                    <span class="track-info-separator">by</span>
+                                    <span class="track-artist"></span>
+                                </div>
                             </div>
                         </div>
                     </div>

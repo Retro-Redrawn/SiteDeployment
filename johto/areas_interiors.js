@@ -290,7 +290,7 @@ var interiorAreas = [
   {
     title: "Violet City: Sprout Tower 3F",
     ident: "violet-city-sprout-tower-3f",
-    artistId: "OPEN",
+    artistId: "UNDF",
     animation: false,
     point: {
       x: 3552,
@@ -770,7 +770,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Radio Tower 3F",
     ident: "goldenrod-city-radio-tower-3f",
-    artistId: "OPEN",
+    artistId: "UNDF",
     animation: false,
     point: {
       x: 1696,
@@ -1298,7 +1298,7 @@ var interiorAreas = [
   {
     title: "Ecruteak City: Tin Tower 1F",
     ident: "ecruteak-city-tin-tower-1f",
-    artistId: "OPEN",
+    artistId: "UNDF",
     animation: false,
     point: {
       x: 2608,

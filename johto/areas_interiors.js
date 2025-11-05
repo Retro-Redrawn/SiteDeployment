@@ -266,7 +266,7 @@ var interiorAreas = [
   {
     title: "Violet City: Sprout Tower 2F",
     ident: "violet-city-sprout-tower-2f",
-    artistId: "OPEN",
+    artistId: "UNDF",
     animation: false,
     point: {
       x: 3552,
@@ -506,7 +506,7 @@ var interiorAreas = [
   {
     title: "Union Cave B2F",
     ident: "union-cave-b2f",
-    artistId: "UNDF",
+    artistId: "YAMB",
     animation: false,
     point: {
       x: 4000,
@@ -842,7 +842,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Dept. Store B1F",
     ident: "goldenrod-city-department-store-basement",
-    artistId: "UNDF",
+    artistId: "GINK",
     animation: false,
     point: {
       x: 2336,
@@ -1034,7 +1034,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Tunnel B1F",
     ident: "goldenrod-city-tunnel-b1f",
-    artistId: "OPEN",
+    artistId: "UNDF",
     animation: false,
     point: {
       x: 1488,
@@ -1106,7 +1106,7 @@ var interiorAreas = [
   {
     title: "Goldenrod PokéCom Center 1F",
     ident: "goldenrod-city-pokecom-center-1f",
-    artistId: "UNDF",
+    artistId: "FLAV",
     animation: false,
     point: {
       x: 1824,
@@ -1442,7 +1442,7 @@ var interiorAreas = [
   {
     title: "SS Aqua: 1F",
     ident: "ss-aqua-1f",
-    artistId: "OPEN",
+    artistId: "UNDF",
     animation: false,
     point: {
       x: 608,
@@ -1586,7 +1586,7 @@ var interiorAreas = [
   {
     title: "SS Aqua: Cabin 6",
     ident: "ss-aqua-cabin-6",
-    artistId: "OPEN",
+    artistId: "UNDF",
     animation: false,
     point: {
       x: 736,
@@ -1850,7 +1850,7 @@ var interiorAreas = [
   {
     title: "Mahogany Town: Rocket Hideout B2F",
     ident: "mahogany-town-rocket-hideout-b2f",
-    artistId: "OPEN",
+    artistId: "UNDF",
     animation: false,
     point: {
       x: 4112,
@@ -1970,7 +1970,7 @@ var interiorAreas = [
   {
     title: "Ice Path B2F (Mahogany)",
     ident: "ice-path-b2f-mahogany",
-    artistId: "OPEN",
+    artistId: "DONT",
     animation: false,
     point: {
       x: 5888,
@@ -1994,7 +1994,7 @@ var interiorAreas = [
   {
     title: "Ice Path B2F (Blackthorn)",
     ident: "ice-path-b2f-blackthorn",
-    artistId: "UNDF",
+    artistId: "NNEK",
     animation: false,
     point: {
       x: 6288,
@@ -2018,7 +2018,7 @@ var interiorAreas = [
   {
     title: "Ice Path B3F",
     ident: "ice-path-b3f",
-    artistId: "UNDF",
+    artistId: "EGOT",
     animation: false,
     point: {
       x: 6544,

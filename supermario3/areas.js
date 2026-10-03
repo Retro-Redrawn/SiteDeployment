@@ -1157,7 +1157,7 @@ var areaData = [
     title: "4-2",
     ident: "4-2",
     artistId: "THED",
-    animation: false,
+    animation: true,
     point: {
       x: 400,
       y: 2000,

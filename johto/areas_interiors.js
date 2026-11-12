@@ -194,7 +194,7 @@ var interiorAreas = [
   {
     title: "Dark Cave (Violet City)",
     ident: "dark-cave-violet-city",
-    artistId: "OPEN",
+    artistId: "STEV",
     animation: false,
     point: {
       x: 4304,
@@ -266,7 +266,7 @@ var interiorAreas = [
   {
     title: "Violet City: Sprout Tower 2F",
     ident: "violet-city-sprout-tower-2f",
-    artistId: "UNDF",
+    artistId: "REPH",
     animation: false,
     point: {
       x: 3552,
@@ -290,7 +290,7 @@ var interiorAreas = [
   {
     title: "Violet City: Sprout Tower 3F",
     ident: "violet-city-sprout-tower-3f",
-    artistId: "UNDF",
+    artistId: "OGLA",
     animation: false,
     point: {
       x: 3552,
@@ -458,7 +458,7 @@ var interiorAreas = [
   {
     title: "Union Cave 1F",
     ident: "union-cave-1f",
-    artistId: "UNDF",
+    artistId: "STDI",
     animation: false,
     point: {
       x: 3328,
@@ -482,7 +482,7 @@ var interiorAreas = [
   {
     title: "Union Cave B1F",
     ident: "union-cave-b1f",
-    artistId: "OPEN",
+    artistId: "STDI",
     animation: false,
     point: {
       x: 3664,
@@ -722,7 +722,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Radio Tower 1F",
     ident: "goldenrod-city-radio-tower-1f",
-    artistId: "OPEN",
+    artistId: "PIXE",
     animation: false,
     point: {
       x: 1696,
@@ -770,7 +770,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Radio Tower 3F",
     ident: "goldenrod-city-radio-tower-3f",
-    artistId: "UNDF",
+    artistId: "AFRO",
     animation: false,
     point: {
       x: 1696,
@@ -794,7 +794,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Radio Tower 4F",
     ident: "goldenrod-city-radio-tower-4f",
-    artistId: "UNDF",
+    artistId: "WEBS",
     animation: false,
     point: {
       x: 1696,
@@ -938,7 +938,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Dept. Store 4F",
     ident: "goldenrod-city-department-store-4f",
-    artistId: "OPEN",
+    artistId: "WEBS",
     animation: false,
     point: {
       x: 2368,
@@ -962,7 +962,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Dept. Store 5F",
     ident: "goldenrod-city-department-store-5f",
-    artistId: "OPEN",
+    artistId: "EDUD",
     animation: false,
     point: {
       x: 2368,
@@ -986,7 +986,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Dept. Store 6F",
     ident: "goldenrod-city-department-store-6f",
-    artistId: "OPEN",
+    artistId: "UNDF",
     animation: false,
     point: {
       x: 2368,
@@ -1034,7 +1034,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Tunnel B1F",
     ident: "goldenrod-city-tunnel-b1f",
-    artistId: "UNDF",
+    artistId: "LAMI",
     animation: false,
     point: {
       x: 1488,
@@ -1058,7 +1058,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Tunnel B2F",
     ident: "goldenrod-city-tunnel-b2f",
-    artistId: "OPEN",
+    artistId: "STDI",
     animation: false,
     point: {
       x: 1888,
@@ -1298,7 +1298,7 @@ var interiorAreas = [
   {
     title: "Ecruteak City: Tin Tower 1F",
     ident: "ecruteak-city-tin-tower-1f",
-    artistId: "UNDF",
+    artistId: "NNEK",
     animation: false,
     point: {
       x: 2608,
@@ -1442,12 +1442,12 @@ var interiorAreas = [
   {
     title: "SS Aqua: 1F",
     ident: "ss-aqua-1f",
-    artistId: "UNDF",
+    artistId: "ACFU",
     animation: false,
     point: {
-      x: 608,
+      x: 784,
       y: 2368,
-      width: 544,
+      width: 384,
       height: 304
     },
     offset: {
@@ -1461,6 +1461,30 @@ var interiorAreas = [
     zoom: 2,
     teleporters: [],
     order: 59,
+    post_url: ""
+  },
+  {
+    title: "SS Aqua: Hallway",
+    ident: "ss-aqua-captain-hallway",
+    artistId: "RILE",
+    animation: false,
+    point: {
+      x: 608,
+      y: 2432,
+      width: 160,
+      height: 192
+    },
+    offset: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    pan: "vertical",
+    type: "directions_boat",
+    zoom: 2,
+    teleporters: [],
+    order: 60,
     post_url: ""
   },
   {
@@ -1484,40 +1508,16 @@ var interiorAreas = [
     type: "directions_boat",
     zoom: 2,
     teleporters: [],
-    order: 60,
+    order: 61,
     post_url: ""
   },
   {
     title: "SS Aqua: Cabin 2",
     ident: "ss-aqua-cabin-2",
-    artistId: "OPEN",
+    artistId: "THOU",
     animation: false,
     point: {
       x: 736,
-      y: 2224,
-      width: 128,
-      height: 128
-    },
-    offset: {
-      x: 0,
-      y: 0,
-      width: 0,
-      height: 0
-    },
-    pan: "horizontal",
-    type: "directions_boat",
-    zoom: 2,
-    teleporters: [],
-    order: 61,
-    post_url: ""
-  },
-  {
-    title: "SS Aqua: Cabin 3",
-    ident: "ss-aqua-cabin-3",
-    artistId: "OPEN",
-    animation: false,
-    point: {
-      x: 880,
       y: 2224,
       width: 128,
       height: 128
@@ -1536,9 +1536,33 @@ var interiorAreas = [
     post_url: ""
   },
   {
+    title: "SS Aqua: Cabin 3",
+    ident: "ss-aqua-cabin-3",
+    artistId: "LUCI",
+    animation: false,
+    point: {
+      x: 880,
+      y: 2224,
+      width: 128,
+      height: 128
+    },
+    offset: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    pan: "horizontal",
+    type: "directions_boat",
+    zoom: 2,
+    teleporters: [],
+    order: 63,
+    post_url: ""
+  },
+  {
     title: "SS Aqua: Cabin 4",
     ident: "ss-aqua-cabin-4",
-    artistId: "OPEN",
+    artistId: "VVVU",
     animation: false,
     point: {
       x: 1024,
@@ -1556,7 +1580,7 @@ var interiorAreas = [
     type: "directions_boat",
     zoom: 2,
     teleporters: [],
-    order: 63,
+    order: 64,
     post_url: ""
   },
   {
@@ -1580,40 +1604,16 @@ var interiorAreas = [
     type: "directions_boat",
     zoom: 2,
     teleporters: [],
-    order: 64,
+    order: 65,
     post_url: ""
   },
   {
     title: "SS Aqua: Cabin 6",
     ident: "ss-aqua-cabin-6",
-    artistId: "UNDF",
+    artistId: "TOAS",
     animation: false,
     point: {
       x: 736,
-      y: 2688,
-      width: 128,
-      height: 128
-    },
-    offset: {
-      x: 0,
-      y: 0,
-      width: 0,
-      height: 0
-    },
-    pan: "horizontal",
-    type: "directions_boat",
-    zoom: 2,
-    teleporters: [],
-    order: 65,
-    post_url: ""
-  },
-  {
-    title: "SS Aqua: Cabin 7",
-    ident: "ss-aqua-cabin-7",
-    artistId: "OPEN",
-    animation: false,
-    point: {
-      x: 880,
       y: 2688,
       width: 128,
       height: 128
@@ -1632,12 +1632,12 @@ var interiorAreas = [
     post_url: ""
   },
   {
-    title: "SS Aqua: Cabin 8",
-    ident: "ss-aqua-cabin-8",
-    artistId: "OPEN",
+    title: "SS Aqua: Cabin 7",
+    ident: "ss-aqua-cabin-7",
+    artistId: "DONU",
     animation: false,
     point: {
-      x: 1024,
+      x: 880,
       y: 2688,
       width: 128,
       height: 128
@@ -1656,9 +1656,33 @@ var interiorAreas = [
     post_url: ""
   },
   {
+    title: "SS Aqua: Cabin 8",
+    ident: "ss-aqua-cabin-8",
+    artistId: "JESS",
+    animation: false,
+    point: {
+      x: 1024,
+      y: 2688,
+      width: 128,
+      height: 128
+    },
+    offset: {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    },
+    pan: "horizontal",
+    type: "directions_boat",
+    zoom: 2,
+    teleporters: [],
+    order: 68,
+    post_url: ""
+  },
+  {
     title: "SS Aqua: B1F",
     ident: "ss-aqua-b1f",
-    artistId: "OPEN",
+    artistId: "XCOO",
     animation: false,
     point: {
       x: 112,
@@ -1676,7 +1700,7 @@ var interiorAreas = [
     type: "directions_boat",
     zoom: 2,
     teleporters: [],
-    order: 68,
+    order: 69,
     post_url: ""
   },
   {
@@ -1700,13 +1724,13 @@ var interiorAreas = [
     type: "directions_boat",
     zoom: 2,
     teleporters: [],
-    order: 69,
+    order: 70,
     post_url: ""
   },
   {
     title: "Whirl Islands B2F",
     ident: "whirl-islands-b2f",
-    artistId: "UNDF",
+    artistId: "FOOF",
     animation: false,
     point: {
       x: 640,
@@ -1724,13 +1748,13 @@ var interiorAreas = [
     type: "hiking",
     zoom: 2,
     teleporters: [],
-    order: 70,
+    order: 71,
     post_url: ""
   },
   {
     title: "NPC House Modern",
     ident: "cianwood-city-house-modern",
-    artistId: "UNDF",
+    artistId: "STDI",
     animation: false,
     point: {
       x: 192,
@@ -1748,7 +1772,7 @@ var interiorAreas = [
     type: "home",
     zoom: 2,
     teleporters: [],
-    order: 71,
+    order: 72,
     post_url: ""
   },
   {
@@ -1770,30 +1794,6 @@ var interiorAreas = [
     },
     pan: "vertical",
     type: "award_star",
-    zoom: 2,
-    teleporters: [],
-    order: 72,
-    post_url: ""
-  },
-  {
-    title: "Mt. Mortar 1F",
-    ident: "mt-mortar-1f",
-    artistId: "UNDF",
-    animation: false,
-    point: {
-      x: 2896,
-      y: 944,
-      width: 640,
-      height: 576
-    },
-    offset: {
-      x: 0,
-      y: 0,
-      width: 0,
-      height: 0
-    },
-    pan: "horizontal",
-    type: "hiking",
     zoom: 2,
     teleporters: [],
     order: 73,
@@ -1826,7 +1826,7 @@ var interiorAreas = [
   {
     title: "Mahogany Town: Rocket Hideout B1F",
     ident: "mahogany-town-rocket-hideout-b1f",
-    artistId: "OPEN",
+    artistId: "STDI",
     animation: false,
     point: {
       x: 4112,
@@ -1850,7 +1850,7 @@ var interiorAreas = [
   {
     title: "Mahogany Town: Rocket Hideout B2F",
     ident: "mahogany-town-rocket-hideout-b2f",
-    artistId: "UNDF",
+    artistId: "GOOO",
     animation: false,
     point: {
       x: 4112,
@@ -1874,7 +1874,7 @@ var interiorAreas = [
   {
     title: "Mahogany Town: Rocket Hideout B3F",
     ident: "mahogany-town-rocket-hideout-b3f",
-    artistId: "OPEN",
+    artistId: "GONS",
     animation: false,
     point: {
       x: 4112,
@@ -1946,7 +1946,7 @@ var interiorAreas = [
   {
     title: "Ice Path B1F",
     ident: "ice-path-b1f",
-    artistId: "UNDF",
+    artistId: "POTA",
     animation: false,
     point: {
       x: 6544,
@@ -2042,7 +2042,7 @@ var interiorAreas = [
   {
     title: "Blackthorn City: Gym 1F",
     ident: "blackthorn-city-gym-1f",
-    artistId: "UNDF",
+    artistId: "THOU",
     animation: false,
     point: {
       x: 5456,
@@ -2061,31 +2061,6 @@ var interiorAreas = [
     zoom: 2,
     teleporters: [],
     order: 84,
-    post_url: ""
-  },
-  {
-    title: "Blackthorn City: Gym 2F",
-    ident: "blackthorn-city-gym-2f",
-    artistId: "UNDF",
-    animation: false,
-    point: {
-	  x: 5456,
-      y: 1184,
-
-      width: 160,
-      height: 288
-    },
-    offset: {
-      x: 0,
-      y: 0,
-      width: 0,
-      height: 0
-    },
-    pan: "vertical",
-    type: "award_star",
-    zoom: 2,
-    teleporters: [],
-    order: 85,
     post_url: ""
   },
   {
@@ -2109,7 +2084,7 @@ var interiorAreas = [
     type: "hiking",
     zoom: 2,
     teleporters: [],
-    order: 86,
+    order: 85,
     post_url: ""
   },
   {
@@ -2133,13 +2108,13 @@ var interiorAreas = [
     type: "home",
     zoom: 2,
     teleporters: [],
-    order: 87,
+    order: 86,
     post_url: ""
   },
   {
     title: "Dark Cave (Blackthorn City)",
     ident: "dark-cave-blackthorn-city",
-    artistId: "UNDF",
+    artistId: "NNNN",
     animation: false,
     point: {
       x: 4960,
@@ -2157,7 +2132,7 @@ var interiorAreas = [
     type: "hiking",
     zoom: 2,
     teleporters: [],
-    order: 88,
+    order: 87,
     post_url: ""
   },
   {
@@ -2181,7 +2156,7 @@ var interiorAreas = [
     type: "storefront",
     zoom: 2,
     teleporters: [],
-    order: 89,
+    order: 88,
     post_url: ""
   },
   {
@@ -2205,7 +2180,7 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 90,
+    order: 89,
     post_url: ""
   },
   {
@@ -2229,7 +2204,7 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 91,
+    order: 90,
     post_url: ""
   },
   {
@@ -2253,7 +2228,7 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 92,
+    order: 91,
     post_url: ""
   },
   {
@@ -2277,7 +2252,7 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 93,
+    order: 92,
     post_url: ""
   },
   {
@@ -2301,7 +2276,7 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 94,
+    order: 93,
     post_url: ""
   },
   {
@@ -2325,7 +2300,7 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 95,
+    order: 94,
     post_url: ""
   },
   {
@@ -2349,7 +2324,7 @@ var interiorAreas = [
     type: "hiking",
     zoom: 2,
     teleporters: [],
-    order: 96,
+    order: 95,
     post_url: ""
   },
   {
@@ -2373,13 +2348,13 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 97,
+    order: 96,
     post_url: ""
   },
   {
     title: "Battle Tower: Hallway",
     ident: "battle-tower-hallway",
-    artistId: "OPEN",
+    artistId: "LUCI",
     animation: false,
     point: {
       x: 912,
@@ -2397,7 +2372,7 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 98,
+    order: 97,
     post_url: ""
   },
   {
@@ -2421,7 +2396,7 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 99,
+    order: 98,
     post_url: ""
   },
   {
@@ -2445,7 +2420,7 @@ var interiorAreas = [
     type: "award_star",
     zoom: 2,
     teleporters: [],
-    order: 100,
+    order: 99,
     post_url: ""
   },
 ];

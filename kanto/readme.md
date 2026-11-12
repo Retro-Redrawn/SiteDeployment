@@ -2,7 +2,7 @@
 
 Repository for the Pokemon Redrawn project.
 
-Developed and refactored by Tyson Moll (https://tysonmoll.ca/). The base code was originally programmed by Jerky (@Hyperjerk) for the Retro Redrawn Kanto and Johto projects.
+Developed and refactored by Tyson Moll (https://tysonmoll.ca/) with contributions by HiddenPowerFire and other community members. The base code was originally programmed by Jerky (@Hyperjerk) for the Retro Redrawn Kanto and Johto projects.
 
 Artists are credited for their work in the project website (as denoted in the areas.js file).
 
@@ -46,7 +46,7 @@ And now, some steps!
     * Not all Redrawn projects use more than one layer, but if you want to include them, reference an applicable project's files and...
     * In index.html's "areaList" div, there are list items for each layer in the project.
         * Change the name provided to the changeLayer function to the name of your layer. Set the class to the same name, and the name in the Span section to the display name.
-    * In home.css, find "#layers li button.__" and replace the name of the layer with your own. Update the background image as well.
+    * In menu.css, find "#layers_select.__" rules and replace the name of the layer with your own. Update the background image as well.
 7. Add areas to the areas.js file (see below)
 8. Remove any remaining project-specific image assets and replace with your own once you are done setting up the project.
     * images are stored in the img folder, where screens can be found in folders defined by the redrawnLayers names 
@@ -61,7 +61,8 @@ area.js - Defines location regions and provides credit to artists
     - order: the position of an area screen within the area list. Should be sequential but doesn't need to be ordered.
     - title: Display name for an entry
     - ident: File identity for an entry; should match the file name without the file extension.
-    - artist: artist name.
+    - artistId: ID of the primary artist, as defined in the artist data.
+    - collaborators: optional array of additional artist IDs for this area. The primary artist and collaborators are all credited, with their names and avatars shown together. For example: `collaborators: ["ARTIST_2", "ARTIST_3"]`.
     - artistImageOverride: Name of the artist's avatar filename if the artist name doesn't match it.
     - animation: set to true if this area has a .gif version
     - point: pixel position of the area when displayed. x, y refers to the top-left co-ordinate. width and height are collected automatically from the source image(s) via a shell script (details below) and can be left as 0 for now.

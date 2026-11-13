@@ -139,6 +139,7 @@ if (layersSelectContainer) {
 loadImages()
 window.addEventListener('wheel', onMouseWheel, { passive: false }); // Not passive, so it can stop the browser zooming the page
 window.addEventListener('resize', onResize);
+window.addEventListener('resize', updateMenuCollaboratorScrolling);
 window.addEventListener('resize', updateMobileArtistTicker);
 window.addEventListener('keydown', onKeyDown);
 window.addEventListener('keydown', function (evt) { if (evt.key === 'Control') { ctrlHeld = true } })
@@ -346,8 +347,9 @@ function setupCanvas (useDefaultPosition) {
     // Set default position/zoom
     if (useDefaultPosition) {
         map.scale.set(zoomMin)
-        map.x = -((map.width) - (window.innerWidth / 2)) * map.scale.x
-        map.y = -((map.height) - (window.innerHeight / 2)) * map.scale.x
+        const bounds = map.getLocalBounds()
+        map.x = window.innerWidth / 2 - (bounds.x + bounds.width) * map.scale.x
+        map.y = window.innerHeight / 2 - (bounds.y + bounds.height) * map.scale.y
 
         currentPos.x = map.x
         currentPos.y = map.y
@@ -542,6 +544,8 @@ function setUpAreas () {
         </li>`
         areaList.innerHTML += html
     }
+
+    updateMenuCollaboratorScrolling()
 }
 
 function getAreaArtists(area) {
@@ -601,6 +605,22 @@ function getArtistNamesHTML(artists) {
             ? `<a class="area__info__artist" href="${artist.url}" target="_blank" title="${artist.name}">${artist.name}</a>`
             : `<a class="area__info__artist">${artist.name}</a>`;
     }).join('');
+}
+
+function updateMenuCollaboratorScrolling() {
+    var tickers = document.querySelectorAll('#areas .area__info__artists');
+    tickers.forEach(function (ticker) {
+        var artistGroup = ticker.querySelector('.area__info__artists-group:not([aria-hidden="true"])');
+        if (!artistGroup || ticker.clientWidth === 0) {
+            ticker.classList.remove('area__info__artists--scrolling');
+            return;
+        }
+
+        var groupStyle = window.getComputedStyle(artistGroup);
+        var trailingPadding = parseFloat(groupStyle.paddingRight) || 0;
+        var textWidth = artistGroup.scrollWidth - trailingPadding;
+        ticker.classList.toggle('area__info__artists--scrolling', textWidth > ticker.clientWidth + 1);
+    });
 }
 
 // Copy area link to clipboard (uses current path + query params)
@@ -1766,12 +1786,22 @@ function newTourArea () {
 
 // #endregion
 
-/** Caps map position to the window inner extents. */
+/** Keeps the map content within reach of the viewport center. */
 function checkMapBoundaries () {
-    if (map.x > Math.floor(window.innerWidth / 2)) { map.x = Math.floor(window.innerWidth / 2) }
-    if (map.y > Math.floor(window.innerHeight / 2)) { map.y = Math.floor(window.innerHeight / 2) }
-    if (map.x < Math.floor(window.innerWidth / 2) - map.width) { map.x = Math.floor(window.innerWidth / 2) - map.width }
-    if (map.y < Math.floor(window.innerHeight / 2) - map.height) { map.y = Math.floor(window.innerHeight / 2) - map.height }
+    const bounds = map.getLocalBounds()
+    const minX = window.innerWidth / 2 - (bounds.x + bounds.width) * map.scale.x
+    const maxX = window.innerWidth / 2 - bounds.x * map.scale.x
+    const minY = window.innerHeight / 2 - (bounds.y + bounds.height) * map.scale.y
+    const maxY = window.innerHeight / 2 - bounds.y * map.scale.y
+
+    const boundedX = clamp(map.x, minX, maxX)
+    const boundedY = clamp(map.y, minY, maxY)
+    if (boundedX !== map.x) {
+        map.x = currentPos.x = zoomCenter.x = boundedX
+    }
+    if (boundedY !== map.y) {
+        map.y = currentPos.y = zoomCenter.y = boundedY
+    }
 }
 
 function checkAutoHighlight() {

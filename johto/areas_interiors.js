@@ -986,7 +986,7 @@ var interiorAreas = [
   {
     title: "Goldenrod Dept. Store 6F",
     ident: "goldenrod-city-department-store-6f",
-    artistId: "UNDF",
+    artistId: "GWEN",
     animation: false,
     point: {
       x: 2368,
